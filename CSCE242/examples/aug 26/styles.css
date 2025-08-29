@@ -1,0 +1,51 @@
+/* Structure */
+
+body {
+    background: #FEFAEF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Navigation*/
+a{
+    text-decoration:none;
+    background: #A68072;
+    color: white;
+    padding: 4px;
+    border-radius: 3px;
+    
+}
+
+a:hover{
+    background: #D9BBB2;
+}
+
+/*Images*/
+img{
+    border: 5px solid #D9BBB2;
+    border-radius: 3px;
+}
+
+/*Tables*/
+table{
+    border-collapse: collapse;
+}
+
+th,
+td{
+    border: 1px solid;
+    padding: 4px;
+}
+
+th{
+    background:#4F7302;
+}
+
+/*Typography*/
+h1{
+    color:#324001;
+    font-style: italic;
+}
+
+h2{
+    color:#72A603;
+}
