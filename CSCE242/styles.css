@@ -1,5 +1,4 @@
 /*Structure*/
-
 body {
     font-family:Georgia, 'Times New Roman', Times, serif;
     background:url(images/bridgeoverlillies.webp);
@@ -19,7 +18,6 @@ body {
     background:#e1ecdc;
     color:#022601;
     padding: 4px,
-    border-radius:3px;
 }
 
 #assignments a:hover{
@@ -42,7 +40,6 @@ body {
 }
 
 /*Typography*/
-
 h1{
     color:#022601;
 }

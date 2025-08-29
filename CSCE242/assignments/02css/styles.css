@@ -1,0 +1,49 @@
+/*Structure*/
+body{
+    background:url(images/cloudcover.jpg);
+    background-size: cover;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#content{
+    padding:5px;
+    background:rgba(193, 213, 229, 0.7);
+    margin: auto;
+    width: 90%;
+    border-radius: 3px;
+
+}
+
+/*Tables*/
+table{
+    margin:auto;
+    border-collapse:collapse; 
+   
+}
+
+th,td{
+    border: solid;
+    padding: 4px;
+}
+
+th{
+    background: #f29544;
+}
+
+/*Typography*/
+.cloudtype{
+    font-style:bold;
+    text-decoration: underline;
+}
+
+h1{
+    color:#f29544;
+}
+
+/*Images*/
+img{
+    margin:5px;
+    border: 5px solid #f29544;
+    border-radius: 3px; 
+}
