@@ -1,0 +1,51 @@
+/*Structure*/
+
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background:url(images/bridgeoverlillies.webp);
+}
+
+#content{
+    background: rgba(215, 229, 208, 0.9);
+    width:80%;
+    padding: 5px;
+    border-radius: 4px;
+    margin: auto;
+}
+
+/*Navigation*/
+#assignments a{
+    text-decoration: none;
+    background:#e1ecdc;
+    color:#022601;
+    padding: 4px,
+    border-radius:3px;
+}
+
+#assignments a:hover{
+    background: #9bbf8a;
+    color: white
+}
+
+#github a{
+    text-decoration:none;
+    background: #b7cdd9;
+    color: #022601;
+    padding: 4px;
+    border-radius: 3px;
+    
+}
+
+#github a:hover{
+    background: #4c829f;
+    color: white;
+}
+
+/*Typography*/
+
+h1{
+    color:#022601;
+}
+h2{
+    color:#4C829F;
+}
