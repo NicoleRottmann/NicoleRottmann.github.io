@@ -1,12 +1,34 @@
+/*Two ways to select an element, Ids v Clss Names
+An Id is unique, whereas a class name can be used for multiple similar elements
+*/
+
+
 /*Structure*/
+
 body
 {
-   background: #94dcc4; 
    /*colors can be hex, name, or rgb(r,g,b) format*/
    font-family: Arial, Helvetica, sans-serif;
+   background: url(images/giraffe.jpg);
+}
+
+#content {
+   background: rgba(209, 240, 230, 0.9); /*adding a --> rgba gives alpha channel for transparency*/
+   width: 75%;
+   margin:auto;
+   padding: 1px 10px;
+   border-radius: 5px;
+   box-shadow:15px 15px #b3e6d5;
 }
 
 /*Navigation*/
+#main-nav a {
+   background:#6253be;
+}
+#main-nav a:hover {
+    background: #d7d2fa;
+}
+
 a {
    text-decoration: none;
    background: #d7d2fa;
@@ -21,8 +43,12 @@ a:hover {
 
 /*Images*/
 img {
+   padding: 10px;
+   margin: 10px;
    border: 5px solid #c8d6e8;
+   border-radius: 5px;
 }
+/*Padding inside border, margin outside*/
 
 /*Tables*/
 table {
@@ -54,3 +80,16 @@ h2 {
    color: #295244;
 }
 
+#g-things {
+   font-style: italic;
+}
+
+strong {
+   color: pink;
+}
+
+.big {
+   font-size: 20px;
+}
+
+/* # for id ; . for class*/

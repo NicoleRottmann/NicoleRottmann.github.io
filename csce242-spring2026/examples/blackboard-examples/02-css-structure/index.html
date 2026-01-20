@@ -9,72 +9,85 @@
 
 <head>
     <title>Cute Giraffes</title>
-    <link rel ="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>I &hearts; Giraffes</h1>
-    <h2>Info for Giraffes</h2>
+    <div id="content">
+        <h1>I &hearts; Giraffes</h1>
+        <h2>Info for Giraffes</h2>
 
-    <p>
-        Lorem <strong>ipsum</strong> dolor sit amet, consectetur adipiscing elit. In vel risus non risus volutpat
-        dictum. Proin vulputate
-        odio odio, a venenatis leo eleifend at. Mauris eget tortor sed enim sagittis vulputate. Aenean tempor vel orci
-        eleifend feugiat. Duis <b>luctus</b> lacus ac lacus feugiat, vitae posuere ex bibendum. Vestibulum faucibus orci
-        vitae
-        orci congue, eget efficitur orci placerat. Donec consequat mi nunc. Pellentesque commodo risus aliquam est
-        accumsan, quis <i>faucibus</i> metus dapibus. Phasellus eleifend dui et pretium tempus. Proin molestie maximus
-        sem,
-        quis tristique arcu euismod vitae. Nunc justo ipsum, pharetra in sollicitudin a, consectetur ut nunc. Nulla
-        vulputate sapien hendrerit quam <em>iaculis</em>, ut volutpat ipsum auctor. Etiam nec risus eu ipsum mollis
-        lobortis ut
-        id ex.
-    </p>
+        <nav id="main-nav">
+            <a href="about.html">About</a>
+            <a href="index.html">Home</a>
+        </nav>
+        <!-- allows me to make an id-->
+        <br />
 
-    <h2>Giraffe Things</h2>
-    <ul>
-        <li>Neck</li>
-        <li>Spots</li>
-        <li>Horns</li>
-        <!-- ul = unordered list (bullets); ol = ordered list (numbers)-->
-    </ul>
 
-    <img src="images/giraffe.jpg" alt="Giraffe head" /> <br />
+        <p>
+            Lorem <strong>ipsum</strong> dolor sit amet, consectetur adipiscing elit. In vel risus non risus volutpat
+            dictum. Proin vulputate
+            odio odio, a venenatis leo eleifend at. Mauris eget tortor sed enim sagittis vulputate. Aenean tempor vel
+            orci
+            eleifend feugiat. Duis <b>luctus</b> lacus ac lacus <strong class="big">feugiat</strong>, vitae posuere ex
+            bibendum. Vestibulum faucibus orci
+            vitae
+            orci congue, eget efficitur orci placerat. Donec consequat mi nunc. Pellentesque commodo risus aliquam est
+            accumsan, quis <i>faucibus</i> metus dapibus. Phasellus eleifend dui et pretium tempus. Proin molestie
+            maximus
+            sem,
+            quis tristique arcu euismod vitae. Nunc justo ipsum, pharetra in sollicitudin a, consectetur ut nunc. Nulla
+            vulputate sapien hendrerit quam <em>iaculis</em>, ut volutpat ipsum auctor. Etiam nec risus eu ipsum mollis
+            lobortis ut
+            id ex.
+        </p>
 
-    <a href="https://en.wikipedia.org/wiki/Giraffe">Giraffe Wiki</a>
-    <!--anchor tags (a) and images are in-line elements!, use paragraph or break (br) to get new line-->
+        <h2 id="g-things">Giraffe Things</h2>
+        <ul>
+            <li>Neck</li>
+            <li>Spots</li>
+            <li>Horns</li>
+            <!-- ul = unordered list (bullets); ol = ordered list (numbers)-->
+        </ul>
 
-    <p>
-        Phasellus pulvinar ut lorem at pulvinar. Suspendisse blandit lectus mollis, sodales sem et, aliquet mauris. Cras
-        ultrices velit eu commodo interdum. Fusce ultrices laoreet vulputate. Donec pellentesque ac diam mollis
-        faucibus. Aenean auctor libero magna, ac hendrerit odio imperdiet eu. Vivamus at tristique massa, id sagittis
-        est. Duis vestibulum quam in ante finibus aliquam. Praesent lobortis posuere ornare. In pulvinar et tortor ut
-        mollis. Morbi imperdiet convallis efficitur. Donec commodo consequat aliquet. Nam venenatis nisi metus, in
-        dignissim lorem iaculis fringilla.
-    </p>
+        <img src="images/giraffe.jpg" alt="Giraffe head" /> <br />
 
-    <a href="about.html">About</a>
-    <a href="index.html">Home</a>
-    <!--Internal Links, no https-->
-    <!--TO move over a directory: ie cssStructure/index.html-->
-    <!--to move up a directory: ie ../../index.html-->
-    <br />
+        <a href="https://en.wikipedia.org/wiki/Giraffe">Giraffe Wiki</a>
+        <!--anchor tags (a) and images are in-line elements!, use paragraph or break (br) to get new line-->
 
-    <table>
-        <tr>
-            <th>Animal</th>
-            <th>description</th>
-        </tr>
-        <tr>
-            <td>Giraffe</td>
-            <td>Mammal</td>
-        </tr>
-        <tr>
-            <td>Lizard</td>
-            <td>reptile</td>
-        </tr>
-        <!--tr(tabular row) creates row, th(tabular header) heading of row, td(tabular data) info in each row/column in order-->
-    </table>
+        <p>
+            Phasellus pulvinar ut lorem at pulvinar. Suspendisse <strong class="big">blandit</strong> lectus mollis,
+            sodales sem et, aliquet mauris. Cras
+            ultrices velit eu commodo interdum. Fusce ultrices laoreet vulputate. Donec pellentesque ac diam mollis
+            faucibus. <strong>Aenean</strong> auctor libero magna, ac hendrerit odio imperdiet eu. Vivamus at tristique
+            massa, id sagittis
+            est. Duis vestibulum quam in ante finibus aliquam. Praesent lobortis posuere ornare. In pulvinar et tortor
+            ut
+            mollis. Morbi imperdiet convallis efficitur. Donec <strong>commodo</strong> consequat aliquet. Nam venenatis
+            nisi metus, in
+            dignissim lorem iaculis fringilla.
+        </p>
+
+
+        <br />
+
+        <table>
+            <tr>
+                <th>Animal</th>
+                <th>description</th>
+            </tr>
+            <tr>
+                <td>Giraffe</td>
+                <td>Mammal</td>
+            </tr>
+            <tr>
+                <td>Lizard</td>
+                <td>reptile</td>
+            </tr>
+            <!--tr(tabular row) creates row, th(tabular header) heading of row, td(tabular data) info in each row/column in order-->
+        </table>
+    </div>
 </body>
 
 </html>
