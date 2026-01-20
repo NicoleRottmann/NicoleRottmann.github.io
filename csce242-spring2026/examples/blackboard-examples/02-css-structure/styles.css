@@ -1,0 +1,56 @@
+/*Structure*/
+body
+{
+   background: #94dcc4; 
+   /*colors can be hex, name, or rgb(r,g,b) format*/
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Navigation*/
+a {
+   text-decoration: none;
+   background: #d7d2fa;
+   color: black;
+   padding: 4px;
+   border-radius: 3px;
+}
+
+a:hover {
+   background: #bdb4f7;
+}
+
+/*Images*/
+img {
+   border: 5px solid #c8d6e8;
+}
+
+/*Tables*/
+table {
+   border-collapse: collapse;
+}
+
+th,
+td{
+   border:1px solid #0a1511;
+   padding: 4px;
+}
+/*PADDING is the space between elements (borders and text)*/
+
+th {
+   background: #c8d6e8;
+}
+
+td {
+   background: #dfe7f2;
+}
+
+/*Typography*/
+h1 {
+   color: #f0faf7;
+   font-style:italic;
+}
+
+h2 {
+   color: #295244;
+}
+
