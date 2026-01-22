@@ -1,0 +1,108 @@
+/*Nicole Rottmann*/
+/*
+Color Scheme: 
+    background: #050510;
+    content div background: rgba(10, 14, 30, 0.9);
+    accent-blue: #82d0ff;
+    accent-purple: #a17bff;
+    text-main: #e9f6ff;
+    text-muted: #b9ccd6;
+    table-head: #0c1223;
+    table-row-alt: rgba(255,255,255,0.03);
+    border: rgba(255,255,255,0.08);
+*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Open+Sans:wght@300;400;700&display=swap');
+
+
+/*Structure*/
+body {
+    background-image: url("images/stars.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #e9f6ff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    background: rgba(10, 14, 30, 0.9);
+    width: 75%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+
+/*Navigation*/
+
+/*Images*/
+img {
+    border:4px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    margin: 10px;
+}
+
+#ss-pic {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.planet-left {
+    float: left;
+    margin-left: 20px;
+}
+
+.planet-right {
+    float: right;
+    margin-left: 20px;
+}
+
+/*Tables*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th {
+  background: rgba(255,255,255,0.1);
+  color: #e9f6ff;
+  padding: 8px;
+}
+
+td {
+  background: rgba(255,255,255,0.05);
+  color: #b9ccd6;
+  padding: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/*Typography*/
+h1 {
+    font-family: "Orbitron", Arial, Helvetica, sans-serif;
+    color:#82d0ff;
+}
+
+#page-header {
+    text-align: center;
+}
+
+h2 {
+    text-align:center;
+    font-family: "Orbitron", Arial, Helvetica, sans-serif;
+    color:#a17bff;
+}
+
+h3 {
+  font-family: "Orbitron", Arial, sans-serif;
+  color: #e9f6ff;
+  clear: both;
+}
+
+p {
+    color:#b9ccd6;
+}
+
+
