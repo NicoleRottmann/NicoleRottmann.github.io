@@ -1,0 +1,53 @@
+/*Structure*/
+
+body {
+    background-image: url("images/leaves.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #e9f6ff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content{
+    background: rgba(215, 229, 208, 0.9);
+    width:80%;
+    padding: 5px;
+    border-radius: 4px;
+    margin: auto;
+}
+
+/*Navigation*/
+#assignments a{
+    text-decoration: none;
+    background:#e1ecdc;
+    color:#022601;
+    padding: 4px,
+}
+
+#assignments a:hover{
+    background: #9bbf8a;
+    color: white
+}
+
+#github-link a{
+    text-decoration:none;
+    background: #b7cdd9;
+    color: #022601;
+    padding: 4px;
+    border-radius: 3px;
+    
+}
+
+#github-link a:hover{
+    background: #4c829f;
+    color: white;
+}
+
+/*Typography*/
+h1{
+    color:#022601;
+}
+h2{
+    color:#4C829F;
+}
