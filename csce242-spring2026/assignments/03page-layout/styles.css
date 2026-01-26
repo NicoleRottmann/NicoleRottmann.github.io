@@ -1,0 +1,158 @@
+/*Structure*/
+body {
+    background: #2F3E34; /* deep muted green */
+}
+
+#main-header,
+#main-footer {
+    background: #FAF7F2; /* warm cream */
+    padding: 5px;
+}
+
+#main-header {
+    border-radius: 5px 5px 0 0;
+}
+
+#main-footer {
+    border-radius: 0 0 5px 5px;
+}
+
+#bio,
+#section2 {
+    background: #EAE6DF; /* soft neutral beige */
+    padding: 5px;
+}
+
+#album-overview {
+    background: #D8CEC3; /* slightly darker beige for contrast */
+    padding: 4px;
+    align-items: stretch;
+}
+
+.album-cover {
+    background: #FAF7F2; /* match header for cohesion */
+    padding: 5px;
+    margin: 5px;
+}
+
+.feature {
+        align-items: center;
+}
+
+.idea {
+    padding:5px;
+    margin: 4px;
+    order: 2;
+}
+
+.photo-left {
+    background:#b99e8a;/* coffee*/
+}
+
+.photo-right {
+    background:#533824; /*espresso*/
+}
+
+.media {
+    order:1;
+}
+
+/*Images*/
+.album-cover img {
+    display:block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.media img{
+    display:block;
+    padding:8px 0 0 3px;
+    margin: auto;
+    align-items: center;
+}
+
+/*Typography*/
+#main-header h1 {
+    text-align: center;
+}
+
+.album-cover h4{
+    background: #dccfc5;
+    text-align: center;
+    margin: 2px 0 6px;
+    min-height: 1.2em;
+    
+}
+
+#section2 {
+    color:white;
+}
+
+.idea h2 {
+    text-align:center;
+}
+
+#main-footer {
+    text-align: center;
+}
+
+
+/*Navigation*/
+#main-nav ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#main-nav li {
+    text-align: center;
+    list-style-type: none;
+    padding: 5px;
+    background-color: #8B5E3C; /* warm brown */
+    border-bottom: 1px solid #6F4A2F;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: #FAF7F2; /* readable on brown */
+    border: 5px;
+}
+
+#main-nav a:hover {
+    background:#c8c6c2;
+}
+/*Larger Resolutions*/
+@media (min-width: 800px) {
+    #main-nav ul,
+    #bio,
+    #album-overview,
+    .feature {
+        display: flex;
+    }
+
+    #main-nav li,
+    #bio > p,
+    #album-overview,
+    .album-cover,
+    .media {
+        flex: 1;
+    }
+
+    .idea {
+        flex: 2;
+    }
+
+    .feature {
+        padding: 3px 10rem 3px;
+        margin:4px;
+        gap: 1rem;
+    }
+    
+    .feature.photo-right .media {
+        order:2;
+    }
+
+    .feature.photo-right .idea {
+        order:1;
+    }
+
+}
