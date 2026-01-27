@@ -1,0 +1,327 @@
+/*TO DO
+-top nav
+-bottom nav (black)
+
+center main nav text
+main footer
+stay connected section
+
+
+*/
+
+
+/*
+
+Black : #000000;
+White: #FFFFFF;
+Garnet: #75000A;
+Nav Hover: #650009;
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+
+/*Structure*/
+body {
+    margin: 0;
+}
+
+#main-header {
+    background: #000000;
+    padding: 1rem 2rem;
+}
+
+#main-nav {
+    background: #75000A;
+
+}
+
+#main-nav ul {
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    align-items: center;
+
+}
+
+#main-nav li {
+    padding: 0px;
+    border-bottom: 1px solid #520000;
+}
+
+.fullscreen-text {
+    background: #FFFFFF;
+    margin: 2rem 4rem;
+    font-size: 1.5rem;
+}
+
+.fullscreen-image {
+  overflow: visible;
+}
+
+.textbox {
+    background:#75000A;
+    padding:.5rem 2rem 2rem;
+    margin: -3rem .5rem 3rem;
+
+    position: relative;
+    z-index: 10;
+}
+
+#testimony {
+    margin: 1rem 3rem 1rem;
+}
+
+#testimonial {
+    padding: 1rem 3rem;
+    align-items: center;
+
+}
+
+#news {
+    margin: 2rem 1rem;
+}
+
+.news-story {
+    max-width: 48rem;
+    margin: 0 auto 2rem;
+    text-align:left;
+
+}
+
+.news-story:hover {
+    background: #EDEDED;
+}
+
+.news-story p {
+    padding:0.5rem;
+}
+
+
+
+
+/*Typography*/
+#main-header {
+    color: #FFFFFF;
+}
+
+#main-header h1 {
+    font-size: 1.65rem;
+    line-height: 1.2;
+}
+
+#main-nav a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    display: inline-block;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 1.25rem;
+}
+
+#main-nav li:hover {
+    background: #650009;
+}
+
+#main-nav li {
+    list-style: none;
+    align-items:center;
+}
+
+.fullscreen-text p{
+    color: #000000;
+    font-family:'Inter', sans-serif;
+    font-weight: 800;
+    line-height: 1.8;
+    
+}
+
+.textbox {
+    color:white;
+    font-family: 'Inter',sans-serif;
+    line-height: 1.8;
+}
+
+.textbox h1,
+.textbox a {
+    font-weight: 800;
+}
+
+.textbox p {
+    font-weight: 600;
+    padding: 0 0 1rem;
+}
+
+#quote {
+    color:#75000A;
+    font-weight: 600;
+    line-height: 1.8;
+    font-size: 1.75rem;
+}
+
+#attribution {
+    font-family: 'Inter', sans-serif;
+    font-weight:800;
+}
+
+.news-story p{
+    margin-top: 0.5rem;
+    line-height:1.5;
+}
+
+.news-story a {
+    font-family: 'Inter',sans-serif;
+    font-weight:800;
+    color:#75000A;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+/*Navigation*/
+#main-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.textbox a {
+    text-decoration: none;
+    background:#000000;
+    border: 2px solid white;
+    border-color: white;
+    padding: 0.5rem 1rem;
+    color:white;
+}
+
+.news-story a {
+    padding:.5rem;
+    display: block;
+    margin-top: 0.75rem;
+}
+
+
+/*Images*/
+.logo {
+    width: 13rem;
+    height: auto;
+    display: block;
+
+}
+
+.fullscreen-image img {
+    max-width: none;
+    width:100%;
+    height: auto;
+    display:block;
+}
+
+#featured-profile {
+    display:block;
+    border-radius:50%;
+    margin: 2rem auto 0;
+}
+
+.news-story img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/*Larger Displays*/
+@media (min-width: 900px) {
+
+    #main-header,
+    #main-nav ul,
+    main nav a,
+    #testimony,
+    #news {
+        display: flex;
+    }
+
+    #main-header img,
+    #main-header h1{
+        margin: 1rem 3rem;
+    }
+
+    #main-nav ul {
+        align-items: stretch;
+        justify-content: space-evenly;
+    }
+
+    #main-nav li {
+        padding: 0;
+    }
+
+    #main-nav a {
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        padding: 1.25rem 1.25rem;
+        box-sizing: border-box;
+    }
+
+    #main-nav ul,
+     .textbox {
+        width: 50%;
+        padding-right: 5rem;
+
+    }
+
+    #main-nav ul,
+    .textbox.right {
+        margin-left: auto;
+        margin-right: 3rem;
+    }
+
+    .textbox.left {
+        margin-right: auto;
+        margin-left: 3rem;
+    }
+
+    .textbox {
+        margin-top:-15rem;
+    }
+
+    #main-nav li {
+        flex: 1;
+        border-bottom:none;
+    }
+
+    .logo {
+        width: 16rem;
+    }
+
+    #main-header h1 {
+        margin-left: auto;
+        text-align: right;
+        font-size: 2rem;
+        align-self:flex-end;
+    }
+
+    .fullscreen-text {
+        margin: 2rem 15rem;
+    }
+
+    #testimony {
+        margin: 3rem 10rem;
+        align-items: center;
+    }
+
+    #news {
+        justify-content: center;
+        gap:2rem;
+        margin: 4rem auto;
+        max-width: 80rem;
+    }
+
+    .news-story {
+        margin:0;
+        flex:1;
+    }
+
+
+}

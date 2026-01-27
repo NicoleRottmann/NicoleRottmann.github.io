@@ -1,0 +1,42 @@
+#ball {
+    background: red;
+    width: 100px;
+    line-height: 100px;
+    height: 100px;
+    border-radius: 50px;
+    animation-name: bounce;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+/*Ball Animation*/
+@keyframes bounce {
+    0% {
+        background: orangered;
+        top: 0px
+    }
+    25% {
+        background: orange;
+        top: 100px
+    }
+    50% {
+        background: yellow;
+        top: 200px
+    }
+    75% {
+        background: orange;
+        top: 100px;
+    }
+    100% {
+        background:orangered;
+        top:0;
+    }
+}
+
+/*Typography*/
+#ball h2 {
+    text-align: center;
+    color: white;
+
+}
