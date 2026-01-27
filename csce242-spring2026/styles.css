@@ -1,53 +1,136 @@
+/*Color Scheme
+body background	#2F3E34
+content container	#FAF7F2
+section cards	#EAE6DF
+headings	#3A4A3F
+paragraph text	#5E6F64
+links	#8B6B4F
+link hover	#3A4A3F
+
+Primary font: font-family: 'Lora', serif;
+Headings: font-family: 'Merriweather', serif;
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Merriweather:wght@400;700&display=swap');
+
 /*Structure*/
-
 body {
-    background-image: url("images/leaves.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #e9f6ff;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    background: #2F3E34;
 }
 
-#content{
-    background: rgba(215, 229, 208, 0.9);
-    width:80%;
-    padding: 5px;
+#content {
+    background: #FAF7F2;
     border-radius: 4px;
-    margin: auto;
 }
+
+#main-header,
+#main-footer {
+    background: #bdc7bd;
+    padding: 4px;
+}
+
+#main-header {
+    border-radius: 4px 4px 0 0;
+}
+
+#main-content {
+    padding: 10px;
+}
+
+#main-footer {
+    border-radius: 0 0 4px 4px;
+}
+
+#assignments-section,
+#project-section {
+    padding: 1rem 4rem;
+    gap: 2rem;
+}
+
 
 /*Navigation*/
-#assignments a{
+a {
     text-decoration: none;
-    background:#e1ecdc;
-    color:#022601;
-    padding: 4px,
 }
 
-#assignments a:hover{
-    background: #9bbf8a;
-    color: white
+#main-header a {
+    padding: 5px;
+    border-radius: 4px;
+    background: #8B6B4F;
+    color: #FAF7F2;
 }
 
-#github-link a{
-    text-decoration:none;
-    background: #b7cdd9;
-    color: #022601;
-    padding: 4px;
-    border-radius: 3px;
+#main-header a:hover {
+    background: #3A4A3F;
+}
+
+.assignment {
+    display: block;
+    background: #d3cfc9;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0.5rem;
+    align-items: center;
+    text-align: center;
+    color:#2F3E34;
     
 }
 
-#github-link a:hover{
-    background: #4c829f;
-    color: white;
+
+/*Images*/
+.assignment img {
+    background: #463628;
+    padding: 4px;
+    border: 2px solid #463628; 
+    border-radius:2px;
 }
 
+
+
 /*Typography*/
-h1{
-    color:#022601;
+#main-header h1,
+#main-header h2 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    color: #3A4A3F;
 }
-h2{
-    color:#4C829F;
+
+#main-header h1 {
+    margin: 4px 2px;
+}
+
+#main-header h2 {
+    margin: 2px 4px;
+}
+
+
+#main-header p,
+#main-footer p {
+    text-align: center;
+    font-family: 'Lora', serif;
+}
+
+.section-title {
+    text-align:center;
+    font-family: 'Lora',serif;
+    margin:4px;
+    padding: 4px;
+    color: #3A4A3F;
+}
+
+
+/*Larger Displays*/
+@media(min-width:800px) {
+    #assignments-section,
+    #project-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .assignment {
+        flex:1;
+    }
+
+
 }
