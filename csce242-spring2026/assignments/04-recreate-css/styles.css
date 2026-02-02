@@ -19,6 +19,10 @@ body {
     margin: 0;
 }
 
+#footer-sm img {
+    border-radius: 50%;
+}
+
 #top-header ul,
 #bottom-footer ul {
     display: flex;
