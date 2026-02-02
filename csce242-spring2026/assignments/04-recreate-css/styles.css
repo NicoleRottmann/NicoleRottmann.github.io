@@ -1,13 +1,3 @@
-/*TO DO
--top nav
--bottom nav (black)
-
-center main nav text
-main footer
-stay connected section
-
-
-*/
 
 
 /*
@@ -16,6 +6,7 @@ Black : #000000;
 White: #FFFFFF;
 Garnet: #75000A;
 Nav Hover: #650009;
+Cream: #EDEDED;
 
 
 */
@@ -26,6 +17,59 @@ Nav Hover: #650009;
 /*Structure*/
 body {
     margin: 0;
+}
+
+#top-header ul,
+#bottom-footer ul {
+    display: flex;
+    background: black;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#bottom-footer ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+#top-header li,
+#bottom-footer li {
+    padding: 1rem;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    position: relative;
+}
+
+#top-header li:not(:last-child)::after,
+#bottom-footer li:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -5px;
+    color: white;
+}
+
+#top-header a:hover,
+#bottom-footer a:hover,
+#about-us-links a:hover,
+#sc-title h2>a:hover,
+#address a:hover {
+    background: #CB2E40;
+    color:white;
+    text-decoration: none;
+}
+
+
+#top-header a,
+#bottom-footer a {
+    color: white;
+    text-decoration: none;
+
 }
 
 #main-header {
@@ -40,14 +84,15 @@ body {
 
 #main-nav ul {
     margin: 0;
-    padding: 1rem;
+    padding: 0;
     list-style: none;
     align-items: center;
+    text-align: center;
 
 }
 
 #main-nav li {
-    padding: 0px;
+    padding: 4px;
     border-bottom: 1px solid #520000;
 }
 
@@ -58,12 +103,12 @@ body {
 }
 
 .fullscreen-image {
-  overflow: visible;
+    overflow: visible;
 }
 
 .textbox {
-    background:#75000A;
-    padding:.5rem 2rem 2rem;
+    background: #75000A;
+    padding: .5rem 2rem 2rem;
     margin: -3rem .5rem 3rem;
 
     position: relative;
@@ -87,7 +132,7 @@ body {
 .news-story {
     max-width: 48rem;
     margin: 0 auto 2rem;
-    text-align:left;
+    text-align: left;
 
 }
 
@@ -96,7 +141,88 @@ body {
 }
 
 .news-story p {
-    padding:0.5rem;
+    padding: 0.5rem;
+}
+
+#stay-connected {
+    background: #EDEDED;
+    padding: .5rem;
+}
+
+#stay-connected h1,
+#stay-connected p {
+    padding: 0 2rem;
+}
+
+#main-footer {
+    background: #75000A;
+    margin: 0;
+    padding: 2rem;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+}
+
+
+#main-footer ul {
+    list-style-type: none;
+    column-count: 2;
+    column-gap: 2rem;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+#footer-images {
+    text-align: center;
+}
+
+#footer-images a {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+#footer-sm {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+
+#main-footer a,
+#main-footer h3 {
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+#main-footer h3 {
+    font-weight: 800;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.25rem;
+    margin-right: 2rem;
+}
+
+#main-footer a {
+    font-weight: 600;
+    font-size: .9rem;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+}
+
+#main-footer li {
+    break-inside: avoid;
+    text-align: left;
+    line-height: 1.4;
+    padding: 0.15rem 0;
+    margin: 0 0;
+}
+
+#lists a:hover {
+    background: #CB2E40;
 }
 
 
@@ -129,20 +255,20 @@ body {
 
 #main-nav li {
     list-style: none;
-    align-items:center;
+    align-items: center;
 }
 
-.fullscreen-text p{
+.fullscreen-text p {
     color: #000000;
-    font-family:'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 800;
     line-height: 1.8;
-    
+
 }
 
 .textbox {
-    color:white;
-    font-family: 'Inter',sans-serif;
+    color: white;
+    font-family: 'Inter', sans-serif;
     line-height: 1.8;
 }
 
@@ -157,7 +283,7 @@ body {
 }
 
 #quote {
-    color:#75000A;
+    color: #75000A;
     font-weight: 600;
     line-height: 1.8;
     font-size: 1.75rem;
@@ -165,21 +291,63 @@ body {
 
 #attribution {
     font-family: 'Inter', sans-serif;
-    font-weight:800;
+    font-weight: 800;
 }
 
-.news-story p{
+.news-story p {
     margin-top: 0.5rem;
-    line-height:1.5;
+    line-height: 1.5;
 }
 
 .news-story a {
-    font-family: 'Inter',sans-serif;
-    font-weight:800;
-    color:#75000A;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: #75000A;
     text-decoration: none;
     font-size: 1.25rem;
 }
+
+#stay-connected {
+    text-align: center;
+}
+
+#stay-connected h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: #75000A;
+    font-size: 3rem;
+}
+
+#stay-connected p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+#stay-connected a {
+
+    text-decoration: none;
+    color: #75000A;
+}
+
+#stay-connected h2 {
+    margin: 1rem;
+}
+
+#mysomc a {
+    text-decoration: none;
+    background: #000000;
+    border: 2px solid white;
+    border-color: white;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+
+}
+
+
+
 
 /*Navigation*/
 #main-nav a {
@@ -189,17 +357,69 @@ body {
 
 .textbox a {
     text-decoration: none;
-    background:#000000;
+    background: #000000;
     border: 2px solid white;
     border-color: white;
     padding: 0.5rem 1rem;
-    color:white;
+    color: white;
 }
 
 .news-story a {
-    padding:.5rem;
+    padding: .5rem;
     display: block;
     margin-top: 0.75rem;
+}
+
+#connected-links {
+    margin: 3rem auto 3rem;
+}
+
+
+
+#connected-links a {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    background: #75000A;
+    border: 3px solid white;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+#external-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+#about-us-links ul {
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+    padding: .5rem 1rem;
+    margin: 1rem auto;
+    border-top: 1px solid #C7C7C7;
+    border-bottom: 1px solid #C7C7C7;
+    box-sizing: border-box;
+}
+
+#address a {
+    text-decoration: underline;
+}
+
+#address p {
+    font-size: .8rem;
+}
+
+#about-us-links li {
+    padding: .75rem 0;
+    margin: 0;
 }
 
 
@@ -213,14 +433,14 @@ body {
 
 .fullscreen-image img {
     max-width: none;
-    width:100%;
+    width: 100%;
     height: auto;
-    display:block;
+    display: block;
 }
 
 #featured-profile {
-    display:block;
-    border-radius:50%;
+    display: block;
+    border-radius: 50%;
     margin: 2rem auto 0;
 }
 
@@ -228,6 +448,14 @@ body {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.button:hover,
+#connected-links > .button:hover,
+#mysomc > .button:hover {
+    background:white;
+    color:#75000A;
+    border: 2px solid #75000A;
 }
 
 
@@ -243,7 +471,7 @@ body {
     }
 
     #main-header img,
-    #main-header h1{
+    #main-header h1 {
         margin: 1rem 3rem;
     }
 
@@ -265,7 +493,7 @@ body {
     }
 
     #main-nav ul,
-     .textbox {
+    .textbox {
         width: 50%;
         padding-right: 5rem;
 
@@ -283,12 +511,12 @@ body {
     }
 
     .textbox {
-        margin-top:-15rem;
+        margin-top: -15rem;
     }
 
     #main-nav li {
         flex: 1;
-        border-bottom:none;
+        border-bottom: none;
     }
 
     .logo {
@@ -299,7 +527,7 @@ body {
         margin-left: auto;
         text-align: right;
         font-size: 2rem;
-        align-self:flex-end;
+        align-self: flex-end;
     }
 
     .fullscreen-text {
@@ -313,15 +541,106 @@ body {
 
     #news {
         justify-content: center;
-        gap:2rem;
+        gap: 2rem;
         margin: 4rem auto;
         max-width: 80rem;
     }
 
     .news-story {
-        margin:0;
-        flex:1;
+        margin: 0;
+        flex: 1;
+    }
+
+    #lists {
+        display: flex;
+        margin: 2rem;
+    }
+
+    #colleges-and-schools,
+    #sc-title {
+        flex: 0 0 50%;
+        max-width: 50%;
+
+    }
+
+    #offices-and-divisions,
+    #about-us-links {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    #tools,
+    #address {
+        flex: 0 0 16.6667%;
+        max-width: 16.6667%;
+    }
+
+    #footer-images {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    #footer-images a {
+        margin: 0;
+    }
+
+    #footer-sm {
+        justify-content: flex-end;
+    }
+
+    #connected-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        /* ← space between the a tags */
+    }
+
+    #stay-connected-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 0 5rem 0;
+        text-align: left;
+        padding: 2rem;
     }
 
 
+
+
+    #about-us-links ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 0.25rem;
+        width: 100%;
+        max-width: none;
+        text-align: left;
+        padding: .75rem;
+        margin: 0;
+        border-left: 1px solid #C7C7C7;
+        border-right: 1px solid #C7C7C7;
+        border-top: none;
+        border-bottom: none;
+    }
+
+
+    #about-us-links li {
+        padding: .5rem 0;
+    }
+
+    #sc-title {
+        align-items: flex-start;
+    }
+
+    #external-links {
+        justify-content: flex-start;
+    }
+
+    #sc-title h2 {
+        margin-left: 0;
+    }
 }
