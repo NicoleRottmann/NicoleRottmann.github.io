@@ -1,0 +1,425 @@
+/*
+Design References
+
+Color Palette
+#C6A45E  - GOLD (lines/buttons/accents)     rgb(198 164 94)
+#b8934e  - DARK GOLD (button hover)
+#E8E5DD  - CREAM (nav bar: 75% opacity)     rgba(232,229,221,0.75)
+#EFEFEF  - EGGSHELL (boxes/filters)         rgb(239 239 239)
+#000000  - BLACK (p text: 75% opacity)
+#FFFFFF  - WHITE 
+
+font-family: 'Cormorant Garamond', serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Proza+Libre:wght@300;400;600&display=swap');
+
+body {
+    background-image: url("images/watercolor-paper-2.png");
+    margin: 0;
+}
+
+.page-container {
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+#main-content {
+    margin: 0;
+}
+
+/* ------------- Navigation Bar ---------------------- */
+#nav-bar {
+    background: rgba(232, 229, 221, 0.75);
+    width: 100%;
+    border-bottom: 2px solid rgb(198 164 94);
+}
+
+.nav-inner {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 4px 0;
+    font-family: 'Cormorant Garamond', serif;
+    box-sizing: border-box;
+}
+
+#nav-content {
+    width: 90%;
+}
+
+#nav-logo {
+    height: 46px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+#nav-options {
+    flex: 1 1 auto;
+    min-width: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#nav-options .nav-option {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 4px 8px;
+}
+
+#nav-options .nav-option:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.button {
+    display: inline-block;
+    background: #C6A45E;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.button:hover {
+    background: #b8934e;
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 14px 3px rgba(0, 0, 0, 0.25);
+}
+
+#sign-up-button {
+    margin-right: 0;
+    flex: 0 0 auto;
+}
+
+
+
+/* ------------- Explore Page ------------------------ */
+
+/* ------------- Slider ------------------------------- */
+
+#explore-page-slider {
+    display: flex;
+    width: 100%;
+    height: 24rem;
+    background: rgb(239 239 239);
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
+    font-family: 'Cormorant Garamond', serif;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+#slider-image {
+    flex: 1 1 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    z-index: 1;
+    margin-right: -10px;
+}
+
+#slider-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 1rem 2rem;
+    margin-top: -1.5rem;
+    font-size: 1.5rem;
+    min-width: 0;
+    z-index: 2;
+    position: relative;
+}
+
+#slider-content p {
+    margin: 20px auto;
+    text-align: left;
+}
+
+#slider-content h1 {
+    margin: 10px auto;
+}
+
+
+
+@media (max-width: 900px) {
+    #explore-page-slider {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #slider-image {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        margin-right: 0;
+    }
+
+    #slider-content {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* ------------- Featured Collections ------------------------- */
+
+
+#featured-collections {
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+
+.explore-page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 200;
+    text-decoration: 1px underline;
+    text-underline-offset: 6px;
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+}
+
+.collections-row {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+    width: 100%;
+}
+
+
+.collection-link {
+    flex: 1 1 0;
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    text-decoration: none;
+    aspect-ratio: 4 / 3;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.collection-link img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.collection-link:hover img {
+    transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+
+    .collections-row {
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .collection-link {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .collection-link img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* ------------- Featured Artists ------------------- */
+#explore-artists-and-favorites {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+#explore-artists-and-favorites .half-col {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.artists-row {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.artist-link {
+    flex: 1 1 0;
+    display: block;
+    min-width: 0;
+    text-decoration: none;
+    color: inherit;
+    overflow: visible;
+}
+
+
+.artist-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.artist-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.artist-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(198, 164, 94, 0.75);
+    color: #FFFFFF;
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+.artist-name {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.artist-meta {
+    margin: 6px 0 0 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.artist-link:hover .artist-card img {
+    transform: scale(1.02);
+    transition: transform .25s ease;
+}
+
+@media (max-width: 900px) {
+    #explore-artists-and-favorites {
+        flex-direction: column;
+    }
+
+    .artists-row {
+        display: flex;
+        gap: 18px;
+    }
+
+    .artist-link {
+        width: 100%;
+    }
+}
+
+/* ---------- Favorites Gallery----------------- */
+#explore-page-favorites-gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: rgb(239 239 239);
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+#explore-page-favorites-gallery h2 {
+    margin: auto 10px;
+}
+
+#explore-favorited-works {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+    width: 95%;
+    margin: 10px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+
+#explore-favorited-works .favorite-link {
+    flex: 1 1 calc(33.333% - 8px);
+    display: block;
+    aspect-ratio: 3 / 4;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.12);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+#explore-favorited-works .favorite-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#explore-favorited-works .favorite-link:hover img {
+    transform: scale(1.03);
+    transition: transform .3s ease;
+}
+
+#view-my-gallery-button {
+    align-self: center;
+    margin: 8px;
+}
+
+@media (max-width: 900px) {
+    .half-col {
+        width: 100%;
+    }
+
+    #explore-favorited-works .favorite-link {
+        flex: 1 1 calc(50% - 8px);
+    }
+}
+
+/*-----------Footer-------------*/
+#footer {
+    background: rgba(232, 229, 221, 0.75);
+    width: 100%;
+    border-top: 2px solid rgb(198 164 94);
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 4px;
+}
