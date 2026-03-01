@@ -168,6 +168,7 @@ body {
     min-width: 0;
     z-index: 2;
     position: relative;
+    margin: -10px;
 }
 
 #slider-content p {
@@ -414,7 +415,8 @@ body {
 
 #view-my-gallery-button {
     align-self: center;
-    margin: 8px;
+    margin: 10px;
+    margin-top: 0;
 }
 
 @media (max-width: 900px) {
