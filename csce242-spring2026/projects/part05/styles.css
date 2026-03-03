@@ -25,7 +25,7 @@ box-shadow: 5px 5px 10px 2px var(--shadow);
     /* BLACK - paragraph text (75% opacity) */
     --black-75: rgba(0, 0, 0, 0.75);
 
-     --black-50: rgba(0, 0, 0, 0.5);
+    --black-50: rgba(0, 0, 0, 0.5);
 
     --shadow: rgba(0, 0, 0, 0.2);
 
@@ -46,10 +46,12 @@ box-shadow: 5px 5px 10px 2px var(--shadow);
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
-  
-    overflow: auto; /* replace any rule that sets overflow: hidden */
+
+    overflow: auto;
+    /* replace any rule that sets overflow: hidden */
 }
 
 body {
@@ -87,14 +89,13 @@ body {
 
 .nav-inner {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    flex-wrap: wrap;
     display: flex;
     align-items: center;
     gap: 12px;
 
-    padding: 4px 0;
+    padding: 6px 0;
     font-family: 'Cormorant Garamond', serif;
     box-sizing: border-box;
 }
@@ -106,171 +107,234 @@ body {
     display: block;
     object-fit: contain;
     flex: 0 0 auto;
+    align-self: center
 }
 
 #nav-options {
-    flex: 1 1 auto;
-    min-width: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     gap: 22px;
     align-items: center;
-    margin-left: auto;
-    margin-right: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    flex: 1 1 auto;
+    min-width: 0;
+
+    justify-content: flex-end;
 }
 
-#nav-options .nav-option {
+#nav-options li a,
+#nav-options>li>.nav-option {
+    display: inline-block;
     text-decoration: none;
     color: var(--black);
     font-weight: 700;
     font-size: 1.15rem;
-    padding: 4px 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
 }
 
-#nav-options .nav-option:hover {
-    background: var(--white-overlay);
-}
+    /* hover / focus */
+    #nav-options li a:hover,
+    #nav-options li a:focus {
+        background: var(--white-overlay);
+        outline: none;
+    }
+
+
+    #sign-up-button {
+        flex: 0 0 auto;
+        margin-left: 12px;
+        display: inline-block;
+        align-self: center;
+    }
+
+    @media (max-width: 800px) {
+
+        .nav-inner {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #nav-logo {
+            flex: 0 0 100%;
+            align-self: flex-start;
+            margin-bottom: 8px;
+        }
+
+        #nav-options {
+            flex: 0 1 auto;
+            justify-content: center;
+            margin: 0;
+        }
+
+        #sign-up-button {
+            flex: 0 0 auto;
+            margin-left: 16px;
+        }
+
+        #nav-options,
+        #sign-up-button {
+            align-self: center;
+        }
+
+        .nav-inner {
+            justify-content: center;
+        }
+    }
+
+    /*------------.button---------------*/
+    .button {
+        display: inline-block;
+        background: var(--gold);
+        color: var(--white);
+        padding: 10px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        box-shadow: 5px 5px 10px 2px var(--shadow);
+        text-align: center;
+    }
+
+    .button:hover {
+        background: var(--dark-gold);
+        transform: translateY(-3px);
+        box-shadow: 8px 8px 14px 3px var(--shadow);
+    }
+
+    /*------------.box--------------*/
+    .box {
+        background: var(--eggshell);
+        box-shadow: 5px 5px 10px 2px var(--shadow);
+        border-radius: 1px;
+    }
 
 
 
-/*------------.button---------------*/
-.button {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--white);
-    padding: 10px 18px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    box-shadow: 5px 5px 10px 2px var(--shadow);
-    text-align: center;
-}
-
-.button:hover {
-    background: var(--dark-gold);
-    transform: translateY(-3px);
-    box-shadow: 8px 8px 14px 3px var(--shadow);
-}
-
-#sign-up-button {
-    margin-right: 0;
-    flex: 0 0 auto;
-}
-
-/*------------.box--------------*/
-.box {
-    background: var(--eggshell);
-    box-shadow: 5px 5px 10px 2px var(--shadow);
-    border-radius: 1px;
-}
+    /*-----------Footer-------------*/
+    #footer {
+        background: var(--cream);
+        width: 100%;
+        border-top: 2px solid var(--gold);
+        text-align: center;
+        font-family: 'Cormorant Garamond', serif;
+        margin: 0;
+        padding: 4px;
+    }
 
 
 
-/*-----------Footer-------------*/
-#footer {
-    background: var(--cream);
+
+    .card {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    /*-------------Artist Card-------------*/
+
+    .artist-link {
+        flex: 1 1 0;
+        display: block;
+        min-width: 0;
+        text-decoration: none;
+        color: inherit;
+        overflow: visible;
+    }
+
+
+    .artist-card {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px 2px var(--shadow);
+
+    }
+
+    .artist-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .artist-info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--gold-75);
+        color: var(--white);
+        padding: 10px 12px;
+        box-sizing: border-box;
+    }
+
+    .artist-name {
+        margin: 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.1;
+        text-align: left;
+    }
+
+    .artist-meta {
+        margin: 6px 0 0 0;
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .artist-link:hover .artist-card img {
+        transform: scale(1.02);
+        transition: transform .25s ease;
+    }
+
+
+
+    /*-----------Collection Card---------------*/
+
+    .collection-card {
+        flex: 1 1 0;
+        display: block;
+        min-width: 0;
+        overflow: hidden;
+        text-decoration: none;
+        aspect-ratio: 4 / 3;
+    }
+
+    .collection-card img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .collection-card:hover img {
+        transform: scale(1.03);
+    }
+
+.work-card {
+    display: block;          /* cleaner than inline-block */
     width: 100%;
-    border-top: 2px solid var(--gold);
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    margin: 0;
-    padding: 4px;
-}
-
-
-
-
-.card {
-    display: block;
-    width: 100%;
+    margin-bottom: 24px;
     box-sizing: border-box;
-    overflow: hidden;
-}
-/*-------------Artist Card-------------*/
-
-.artist-link {
-    flex: 1 1 0;
-    display: block;
-    min-width: 0;
-    text-decoration: none;
-    color: inherit;
-    overflow: visible;
-}
-
-
-.artist-card {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    overflow: hidden;
     box-shadow: 5px 5px 10px 2px var(--shadow);
-
+    overflow: hidden;        /* prevents scaled image overflow */
 }
 
-.artist-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.work-card img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
-.artist-info {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--gold-75);
-    color: var(--white);
-    padding: 10px 12px;
-    box-sizing: border-box;
-}
-
-.artist-name {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1.1;
-    text-align: left;
-}
-
-.artist-meta {
-    margin: 6px 0 0 0;
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-align: left;
-}
-
-.artist-link:hover .artist-card img {
+.work-card:hover img {
     transform: scale(1.02);
     transition: transform .25s ease;
 }
-
-
-
-/*-----------Collection Card---------------*/
-
-.collection-card {
-    flex: 1 1 0;
-    display: block;
-    min-width: 0;
-    overflow: hidden;
-    text-decoration: none;
-    aspect-ratio: 4 / 3;
-}
-
-.collection-card img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.collection-card:hover img {
-    transform: scale(1.03);
-}
-
-
