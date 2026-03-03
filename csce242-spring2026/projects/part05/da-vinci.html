@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Leonardo da Vinci</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="artifacts.css">
+    <link rel="stylesheet" href="artist.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <nav id="nav-bar">
+        <div class="nav-inner">
+            <img id="nav-logo" src="images/logo.png" alt="Artistry Online Logo">
+
+            <ul id="nav-options">
+                <li><a href="index.html" .html" class="nav-option">Explore</a></li>
+                <li><a href="collections.html" class="nav-option">Collections</a></li>
+                <li><a href="artists.html"" class=" nav-option">Artists</a></li>
+                <li><a href="works.html" class="nav-option">Works</a></li>
+                <li><a href="about.html" class="nav-option">About</a></li>
+            </ul>
+
+            <a id="sign-up-button" class="button" href="#">Sign Up</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+
+        <div class="page-container">
+            <h1 class="page-title">Leonardo da Vinci</h1>
+
+            <p class="artist-details">
+                Apr 15, 1452 - May 2, 1519 &middot; Italian
+            </p>
+
+            <div class="artist-content">
+                <img class="artist-page-image" src="images/artists/leonardo-da-vinci.png" alt="Leonardo da Vinci">
+
+                <div class="artist-page-info">
+                    <div class="button add-to-favorites-btn">
+                        &#9825; Add to Favorites
+                    </div>
+
+                    <div class="artist-bio">
+                        <p>
+                            Leonardo da Vinci (1452–1519) was an Italian Renaissance master whose work embodies the
+                            union of art and science. A painter, inventor, anatomist, engineer, and visionary thinker,
+                            Leonardo approached creativity with relentless curiosity and intellectual rigor. Trained in
+                            Florence under Andrea del Verrocchio, he developed groundbreaking techniques in composition,
+                            anatomy, and light, most notably through his use of sfumato, which created soft transitions
+                            between tones and gave his figures remarkable lifelike presence. His careful observation of
+                            nature, combined with an extraordinary sensitivity to human expression, allowed him to
+                            depict not only physical form but also subtle emotion and psychological complexity.
+                        </p>
+
+                        <p>
+                            His most celebrated works, including The Last Supper and Mona Lisa, are renowned for their
+                            psychological depth, balance, and innovative perspective. In The Last Supper, Leonardo
+                            masterfully arranged the apostles in dynamic groups, capturing the dramatic moment of
+                            Christ’s announcement with unprecedented realism and emotional tension. The enigmatic smile
+                            of the Mona Lisa and the atmospheric landscape behind her demonstrate his refined
+                            understanding of perspective, optics, and the interplay between light and shadow. Leonardo’s
+                            compositions often reveal meticulous planning and experimentation, reflecting his belief
+                            that painting was a science rooted in mathematics and observation.
+                        </p>
+
+                        <p>
+                            Beyond painting, Leonardo filled countless notebooks with detailed studies of the human
+                            body, mechanical inventions, hydraulic systems, architecture, and the mechanics of
+                            flight—revealing a mind centuries ahead of its time. His anatomical drawings, based on
+                            dissections he conducted himself, remain admired for their precision and insight. Designs
+                            for flying machines, armored vehicles, and complex engineering systems demonstrate both
+                            imaginative daring and technical sophistication. Although many of his inventions were never
+                            realized during his lifetime, they illustrate the breadth of his intellect and his desire to
+                            understand the principles governing the natural world.
+                        </p>
+
+                        <p>
+                            Leonardo spent his later years in France under the patronage of King Francis I, continuing
+                            his studies and refining his ideas until his death in 1519. His legacy endures not only
+                            through his masterpieces but through his enduring model of interdisciplinary genius and
+                            humanistic inquiry. As a symbol of the Renaissance ideal, Leonardo represents the boundless
+                            potential of human curiosity, creativity, and the pursuit of knowledge across disciplines.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h1 class="artist-gallery-title">Works</h1>
+
+            <div class="artist-gallery artifacts-layout"> <!--Will hold sort/filter boxes and the gallery grid-->
+                <aside class="sidebar">
+                    <div class="sidebar-content">
+                        <div class="box control-box" aria-expanded="false"> <!--SORT BOX-->
+                            <div class="control-title" tabindex="0">SORT BY:</div>
+
+                            <fieldset class="sort-group">
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-default" name="sort" value="default" class="sort-input"
+                                        checked>
+                                    <label for="sort-default">Popularity</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-newest" name="sort" value="newest" class="sort-input">
+                                    <label for="sort-newest">Newest</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-oldest" name="sort" value="az" class="sort-input">
+                                    <label for="sort-oldest">Oldest</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-az" name="sort" value="az" class="sort-input">
+                                    <label for="sort-az">A → Z</label>
+                                </div>
+
+                                <!-- add up to 3–6 options as needed -->
+                            </fieldset>
+                        </div>
+
+                        <div class="box control-box" aria-expanded="false"> <!--FILTER BOX-->
+                            <div class="control-title" tabindex="0">FILTER BY:</div>
+
+                            <div class="filter-group" data-filter="medium">
+                                <div id="filter-medium-heading" class="filter-subheading">Medium</div>
+
+                                <div class="filter-options" data-limit="5">
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-oil" name="medium" value="oil"
+                                            class="filter-checkbox">
+                                        <label for="medium-oil">Oil</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-watercolor" name="medium" value="watercolor"
+                                            class="filter-checkbox">
+                                        <label for="medium-watercolor">Watercolor</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-acrylic" name="medium" value="acrylic"
+                                            class="filter-checkbox">
+                                        <label for="medium-acrylic">Acrylic</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-sculpture" name="medium" value="sculpture"
+                                            class="filter-checkbox">
+                                        <label for="medium-sculpture">Sculpture</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-print" name="medium" value="print"
+                                            class="filter-checkbox">
+                                        <label for="medium-print">Print</label>
+                                    </div>
+
+                                    <!-- See more button -->
+                                    <button type="button" class="see-more-btn">
+                                        see more...
+                                    </button>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="filter-btns">
+                                <div>
+                                    <button type="button" class="button sidebar-button apply-filters">Apply</button>
+                                    <button type="button" class="button sidebar-button clear-filters">Clear</button>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- works gallery----------->
+                <div class="masonry-scroll">
+                    <section class="gallery-masonry">
+
+                        <!-- Single work card-->
+                        <a href="the-last-supper.html" class="card work-card" data-title="The Last Supper"
+                            data-letter="L" data-artist="Leonardo da Vinci" data-medium="Tempera">
+                            <img src="images/works/the-last-supper.jpg" alt="The Last Supper by Leonardo da Vinci">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Virgin and the Child with Saint Anne"
+                            data-letter="V" data-artist="Leonardo da Vinci" data-medium="Oil">
+                            <img src="images/works/the-virgin-and-child-with-saint-anne.png"
+                                alt="The Virgin and the Child with Saint Anne by Leonardo da Vinci">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Vitruvian Man" data-letter="V"
+                            data-artist="Leonardo da Vinci" data-medium="Ink">
+                            <img src="images/works/vitruvian-man.png" alt="Vitruvian Man by Leonardo da Vinci">
+                        </a>
+
+                        <a href="a-study-of-a-womans-hands.html" class="card work-card"
+                            data-title="A Study of a Woman's Hands" data-letter="A" data-artist="Leonardo da Vinci"
+                            data-medium="Drawing">
+                            <img src="images/works/A-study-of-a-woman's-hands.png"
+                                alt="A Study of a Woman's Hands by Leonardo da Vinci">
+                        </a>
+
+                        <a href="ginevra-de-benci.html" class="card work-card" data-title="Ginevra de' Benci"
+                            data-letter="G" data-artist="Leonardo da Vinci" data-medium="Oil on panel">
+                            <img src="images/works/Ginevra-de'-Benci.png" alt="Ginevra de' Benci by Leonardo da Vinci">
+                        </a>
+
+                        <a href="mona-lisa.html" class="card work-card" data-title="Mona Lisa" data-letter="M"
+                            data-artist="Leonardo da Vinci" data-medium="Oil on panel">
+                            <img src="images/works/mona-lisa.png" alt="Mona Lisa by Leonardo da Vinci">
+                        </a>
+
+                        <a href="the-throat-and-the-muscles-of-the-leg.html" class="card work-card"
+                            data-title="The Throat and the Muscles of the Leg" data-letter="T"
+                            data-artist="Leonardo da Vinci" data-medium="Anatomical drawing">
+                            <img src="images/works/The-throat-and-the-muscles-of-the-leg.png"
+                                alt="The Throat and the Muscles of the Leg by Leonardo da Vinci">
+                        </a>
+
+                        <a href="lady-with-an-ermine.html" class="card work-card" data-title="Lady with an Ermine"
+                            data-letter="L" data-artist="Leonardo da Vinci" data-medium="Oil on panel">
+                            <img src="images/works/lady-with-an-ermine.jpg"
+                                alt="Lady with an Ermine by Leonardo da Vinci">
+                        </a>
+
+                        <a href="the-battle-of-anghiari.html" class="card work-card" data-title="The Battle of Anghiari"
+                            data-letter="B" data-artist="Leonardo da Vinci" data-medium="Mural (lost)">
+                            <img src="images/works/the-Battle-of-Anghiari.jpg"
+                                alt="The Battle of Anghiari by Leonardo da Vinci">
+                        </a>
+
+                        <a href="mounted-warrior.html" class="card work-card" data-title="Mounted Warrior"
+                            data-letter="M" data-artist="Leonardo da Vinci" data-medium="Drawing">
+                            <img src="images/works/Mounted-Warrior.png" alt="Mounted Warrior by Leonardo da Vinci">
+                        </a>
+
+                        <a href="a-birds-eye-view-of-western-tuscany.html" class="card work-card"
+                            data-title="A Bird's-Eye View of Western Tuscany" data-letter="A"
+                            data-artist="Leonardo da Vinci" data-medium="Drawing">
+                            <img src="images/works/A-bird's-eye-view-of-western-Tuscany.png"
+                                alt="A Bird's-Eye View of Western Tuscany by Leonardo da Vinci">
+                        </a>
+
+                    </section>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!--FOOTER-->
+    <footer id="footer">
+        <p>
+            &copy Nicole Rottmann
+        </p>
+    </footer>
+    <!--END FOOTER-->
+
+</body>
+
+</html>

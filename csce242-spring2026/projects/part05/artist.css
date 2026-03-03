@@ -1,0 +1,83 @@
+.artist-details {
+    font-family:'proza libre',serif;
+    font-weight: 400;
+    margin-top: -15px;
+    font-size:1rem;
+}
+
+.artist-content {
+    width: 100%;
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    min-width:0;
+    align-items: flex-start;
+
+}
+
+.artist-page-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 5px 5px 10px 2px var(--shadow);
+  flex: 1 1 50%;   
+  min-width: 0;     
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.artist-page-image img {
+  width: 100%;
+  height: auto;           
+  display: block;
+  max-width: 100%;
+  object-fit: contain;     
+}
+
+.artist-bio p{
+    font-family: 'Proza Libre', serif;
+    color: var(--black-75);
+    text-align: left;
+}
+
+
+.artist-page-info{
+  margin-top: -4rem;
+    flex: 1 1 50%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.add-to-favorites-btn {
+    justify-content: center;
+    margin: auto;
+    width: 200px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.artist-gallery-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-family: 'proza libre', serif;
+    margin-bottom: 1rem;
+}
+
+
+@media (max-width: 900px) {
+  .artist-content {
+    flex-direction: column;
+  }
+
+  .artist-page-info{
+  margin-top: auto;
+  }
+
+  .artist-page-image,
+  .artist-page-info {
+    flex: 0 0 100%;
+  }
+}
+
