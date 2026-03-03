@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Artistry Online | Works
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="artifacts.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav id="nav-bar">
+        <div class="nav-inner">
+            <img id="nav-logo" src="images/logo.png" alt="Artistry Online Logo">
+
+            <ul id="nav-options">
+                <li><a href="index.html" .html" class="nav-option">Explore</a></li>
+                <li><a href="collections.html" class="nav-option">Collections</a></li>
+                <li><a href="artists.html"" class=" nav-option">Artists</a></li>
+                <li><a href="works.html" class="nav-option">Works</a></li>
+                <li><a href="about.html" class="nav-option">About</a></li>
+            </ul>
+
+            <a id="sign-up-button" class="button" href="#">Sign Up</a>
+        </div>
+    </nav>
+    <!--End NAV-->
+
+
+    <!--Page Content-->
+    <main id="main-content">
+        <!--.pagecontainer class used to make main content uniform (margins etc.)-->
+        <div class="page-container">
+
+            <div class="artifacts-header"> <!--Wrapper for title & alphabet filter-->
+
+                <h1 class="artifacts-title">
+                    Works
+                </h1>
+
+                <div class="alphabet-box">
+                    <ul class="alphabet-list">
+                        <li>
+                            <button class="alphabet-btn" data-letter="all">All</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="A">A</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="B">B</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="C">C</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="D">D</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="E">E</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="F">F</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="G">G</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="H">H</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="I">I</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="J">J</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="K">K</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="L">L</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="M">M</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="N">N</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="O">O</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="P">P</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="Q">Q</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="R">R</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="S">S</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="T">T</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="U">U</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="V">V</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="W">W</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="X">X</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="Y">Y</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="Z">Z</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="artifacts-search">
+                <form class="search-bar artifacts-search-form" data-entity="collection">
+
+                    <!-- Text input where user types -->
+                    <input type="text" class="artifacts-search-input" name="search" placeholder="Search for a work..."
+                        autocomplete="off">
+
+                </form>
+            </div>
+
+
+
+            <div class="artifacts-layout"> <!--Will hold sort/filter boxes and the gallery grid-->
+                <aside class="sidebar">
+                    <div class="sidebar-content">
+                        <div class="box control-box" aria-expanded="false"> <!--SORT BOX-->
+                            <div class="control-title" tabindex="0">SORT BY:</div>
+
+                            <fieldset class="sort-group">
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-default" name="sort" value="default" class="sort-input"
+                                        checked>
+                                    <label for="sort-default">Popularity</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-newest" name="sort" value="newest" class="sort-input">
+                                    <label for="sort-newest">Newest</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-oldest" name="sort" value="az" class="sort-input">
+                                    <label for="sort-oldest">Oldest</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-az" name="sort" value="az" class="sort-input">
+                                    <label for="sort-az">A → Z</label>
+                                </div>
+
+                                <!-- add up to 3–6 options as needed -->
+                            </fieldset>
+                        </div>
+
+                        <div class="box control-box" aria-expanded="false"> <!--FILTER BOX-->
+                            <div class="control-title" tabindex="0">FILTER BY:</div>
+
+                            <div class="filter-group" data-filter="medium">
+                                <div id="filter-medium-heading" class="filter-subheading">Medium</div>
+
+                                <div class="filter-options" data-limit="5">
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-oil" name="medium" value="oil"
+                                            class="filter-checkbox">
+                                        <label for="medium-oil">Oil</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-watercolor" name="medium" value="watercolor"
+                                            class="filter-checkbox">
+                                        <label for="medium-watercolor">Watercolor</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-acrylic" name="medium" value="acrylic"
+                                            class="filter-checkbox">
+                                        <label for="medium-acrylic">Acrylic</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-sculpture" name="medium" value="sculpture"
+                                            class="filter-checkbox">
+                                        <label for="medium-sculpture">Sculpture</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-print" name="medium" value="print"
+                                            class="filter-checkbox">
+                                        <label for="medium-print">Print</label>
+                                    </div>
+
+                                    <!-- See more button -->
+                                    <button type="button" class="see-more-btn">
+                                        see more...
+                                    </button>
+                                </div>
+
+
+                            </div>
+
+                            <div class="filter-group" data-filter="era">
+                                <div id="filter-era-heading" class="filter-subheading">Era</div>
+
+                                <div class="filter-options" data-limit="5">
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-ancient" name="era" value="ancient"
+                                            class="filter-checkbox">
+                                        <label for="era-ancient">Ancient</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-medieval" name="era" value="medieval"
+                                            class="filter-checkbox">
+                                        <label for="era-medieval">Medieval</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-modern" name="era" value="modern"
+                                            class="filter-checkbox">
+                                        <label for="era-modern">Modern</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-contemporary" name="era" value="contemporary"
+                                            class="filter-checkbox">
+                                        <label for="era-contemporary">Contemporary</label>
+                                    </div>
+
+                                    <button type="button" class="see-more-btn">
+                                        see more...
+                                    </button>
+                                </div>
+                            </div>
+
+
+                            <div class="filter-group" data-filter="artist">
+                                <div id="filter-era-heading" class="filter-subheading">Artist</div>
+
+
+                                <form class="search-bar sidebar-mini-search" role="search">
+                                    <input id="sidebar-artist-search" class="sidebar-mini-search-input" type="search"
+                                        name="artistQuery" placeholder="Search artists..." autocomplete="off">
+                                    <button class="button sidebar-button" type="submit"
+                                        class="sidebar-mini-search-submit">
+                                        Go
+                                    </button>
+                                </form>
+
+                            </div>
+
+
+                            <div class="filter-btns">
+                                <div>
+                                    <button type="button" class="button sidebar-button apply-filters">Apply</button>
+                                    <button type="button" class="button sidebar-button clear-filters">Clear</button>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- works gallery----------->
+                <div class="masonry-scroll">
+                    <section class="gallery-masonry">
+
+                        <!-- Single work card-->
+                        <a href="#" class="card work-card" data-title="The Last Supper" data-letter="L"
+                            data-artist="Leonardo da Vinci" data-medium="Tempera">
+                            <img src="images/works/the-last-supper.jpg" alt="The Last Supper by Leonardo da Vinci">
+                        </a>
+
+
+                        <a href="#" class="card work-card" data-title="Almond Blossoms" data-letter="A"
+                            data-artist="Van Gogh" data-medium="Oil">
+                            <img src="images/works/almond-blossoms.png" alt="Almond Blossoms by Van Gogh">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Angel with Wings" data-letter="A"
+                            data-artist="Unknown" data-medium="Oil">
+                            <img src="images/works/angel-with-wings.png" alt="Angel with Wings">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Girl with a Pearl Earring" data-letter="G"
+                            data-artist="Vermeer" data-medium="Oil">
+                            <img src="images/works/girl-with-pearl-earring.png"
+                                alt="Girl with a Pearl Earring by Vermeer">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Massacre of the Innocents" data-letter="M"
+                            data-artist="Rubens" data-medium="Oil">
+                            <img src="images/works/massacre-of-the-innocents.png"
+                                alt="Massacre of the Innocents by Rubens">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Saint Catherine of Alexandria" data-letter="S"
+                            data-artist="Caravaggio" data-medium="Oil">
+                            <img src="images/works/saint-catherine-of-alexandria.png"
+                                alt="Saint Catherine of Alexandria by Caravaggio">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Samson Slaying Philistine" data-letter="S"
+                            data-artist="Guido Reni" data-medium="Oil">
+                            <img src="images/works/samson-slaying-phlistine.png"
+                                alt="Samson Slaying Philistine by Guido Reni">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Virgin and the Child with Saint Anne"
+                            data-letter="V" data-artist="Leonardo da Vinci" data-medium="Oil">
+                            <img src="images/works/the-virgin-and-child-with-saint-anne.png"
+                                alt="The Virgin and the Child with Saint Anne by Leonardo da Vinci">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Tower of Babel" data-letter="T"
+                            data-artist="Pieter Bruegel the Elder" data-medium="Oil">
+                            <img src="images/works/tower-of-babel.png" alt="Tower of Babel by Pieter Bruegel the Elder">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Two Women at a Window" data-letter="T"
+                            data-artist="Bartolomé Esteban Murillo" data-medium="Oil">
+                            <img src="images/works/two-women-at-a-window.png" alt="Two Women at a Window by Murillo">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Vitruvian Man" data-letter="V"
+                            data-artist="Leonardo da Vinci" data-medium="Ink">
+                            <img src="images/works/vitruvian-man.png" alt="Vitruvian Man by Leonardo da Vinci">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Water Lilies" data-letter="W" data-artist="Monet"
+                            data-medium="Oil">
+                            <img src="images/works/water-lilies.png" alt="Water Lilies by Monet">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Kiss" data-letter="K"
+                            data-artist="Gustav Klimt" data-medium="Oil and gold leaf on canvas">
+                            <img src="images/works/the-kiss.png" alt="The Kiss by Gustav Klimt">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Little Dancer of Fourteen Years" data-letter="L"
+                            data-artist="Edgar Degas" data-medium="Wax sculpture (later bronze)">
+                            <img src="images/works/little-dancer-of-fourteen-years.png"
+                                alt="Little Dancer of Fourteen Years by Edgar Degas">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Portrait of Madame Matisse (The Green Line)"
+                            data-letter="P" data-artist="Henri Matisse" data-medium="Oil on canvas">
+                            <img src="images/works/Portrait-of-Madame-Matisse.-The Green-Line.png"
+                                alt="Portrait of Madame Matisse (The Green Line) by Henri Matisse">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Alex Reduction Block" data-letter="A"
+                            data-artist="Alexander Calder" data-medium="Painted steel">
+                            <img src="images/works/alex-reduction-block.png"
+                                alt="Alex Reduction Block by Alexander Calder">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Birth of Venus" data-letter="B"
+                            data-artist="Sandro Botticelli" data-medium="Tempera on canvas">
+                            <img src="images/works/The-birth-of-venus.webp"
+                                alt="The Birth of Venus by Sandro Botticelli">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Jane Seymour, Queen of England" data-letter="J"
+                            data-artist="Hans Holbein the Younger" data-medium="Oil on panel">
+                            <img src="images/works/jane-seymour-queen-of-england.png"
+                                alt="Jane Seymour, Queen of England by Hans Holbein the Younger">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Rhinoceros" data-letter="R"
+                            data-artist="Albrecht Dürer" data-medium="Woodcut print">
+                            <img src="images/works/the-rhinoceros.png" alt="The Rhinoceros by Albrecht Dürer">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Creation of Adam" data-letter="C"
+                            data-artist="Michelangelo" data-medium="Fresco">
+                            <img src="images/works/the-creation-of-adam.jpg" alt="The Creation of Adam by Michelangelo">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Campbell's Soup Cans" data-letter="C"
+                            data-artist="Andy Warhol" data-medium="Synthetic polymer paint on canvas">
+                            <img src="images/works/campbells-soup.png" alt="Campbell's Soup Cans by Andy Warhol">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Radiant Baby" data-letter="R"
+                            data-artist="Keith Haring" data-medium="Acrylic and marker on various surfaces">
+                            <img src="images/works/the-radiant-baby.png" alt="Radiant Baby by Keith Haring">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Woman with a Parasol" data-letter="W"
+                            data-artist="Claude Monet" data-medium="Oil on canvas">
+                            <img src="images/works/woman-with-a-parasol.png" alt="Woman with a Parasol by Claude Monet">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Great Wave off Kanagawa" data-letter="W"
+                            data-artist="Hokusai" data-medium="Woodblock print">
+                            <img src="images/works/the-wave.jpg" alt="The Great Wave off Kanagawa by Hokusai">
+                        </a>
+
+
+                        <a href="#" class="card work-card" data-title="Indian Church" data-letter="I"
+                            data-artist="Georgia O’Keeffe" data-medium="Oil on canvas">
+                            <img src="images/works/indian-church.png" alt="Indian Church by Georgia O’Keeffe">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Dream" data-letter="D"
+                            data-artist="Pablo Picasso" data-medium="Oil on canvas">
+                            <img src="images/works/the-dream.png" alt="The Dream by Pablo Picasso">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Head of a Skeleton with a Burning Cigarette"
+                            data-letter="H" data-artist="Vincent van Gogh" data-medium="Oil on canvas">
+                            <img src="images/works/head-of-a-skeleton-with-a-burning-cigarette.png"
+                                alt="Head of a Skeleton with a Burning Cigarette by Vincent van Gogh">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Execution of Lady Jane Grey" data-letter="E"
+                            data-artist="Paul Delaroche" data-medium="Oil on canvas">
+                            <img src="images/works/the-execution-of-lady-jane-grey.jpg"
+                                alt="The Execution of Lady Jane Grey by Paul Delaroche">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Starry Night" data-letter="S"
+                            data-artist="Vincent van Gogh" data-medium="Oil on canvas">
+                            <img src="images/works/starry-night.png" alt="The Starry Night by Vincent van Gogh">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Veiled Virgin" data-letter="V"
+                            data-artist="Giovanni Strazza" data-medium="Marble sculpture">
+                            <img src="images/works/the-veiled-virgin.jpg" alt="The Veiled Virgin by Giovanni Strazza">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Jimson Weed / White Flower No. 1" data-letter="J"
+                            data-artist="Georgia O’Keeffe" data-medium="Oil on canvas">
+                            <img src="images/works/jimson-weed-white-flower-no-1.webp"
+                                alt="Jimson Weed / White Flower No. 1 by Georgia O’Keeffe">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Thinker" data-letter="T"
+                            data-artist="Auguste Rodin" data-medium="Bronze sculpture">
+                            <img src="images/works/the-thinker.png" alt="The Thinker by Auguste Rodin">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Plate 626 (Gallop)" data-letter="G"
+                            data-artist="Eadweard Muybridge" data-medium="Photographic motion study">
+                            <img src="images/works/plate-number-626-gallop.png"
+                                alt="Plate 626 (Gallop) by Eadweard Muybridge">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="Self-Portrait with Monkey" data-letter="S"
+                            data-artist="Frida Kahlo" data-medium="Oil on masonite">
+                            <img src="images/works/self-portrait-with-monkey.jpg"
+                                alt="Self-Portrait with Monkey by Frida Kahlo">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="American Gothic" data-letter="A"
+                            data-artist="Grant Wood" data-medium="Oil on beaverboard">
+                            <img src="images/works/american-gothic.png" alt="American Gothic by Grant Wood">
+                        </a>
+
+                        <a href="#" class="card work-card" data-title="The Persistence of Memory" data-letter="P"
+                            data-artist="Salvador Dalí" data-medium="Oil on canvas">
+                            <img src="images/works/the-persistence-of-memory.jpg"
+                                alt="The Persistence of Memory by Salvador Dalí">
+                        </a>
+
+
+
+
+
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!--FOOTER-->
+    <footer id="footer">
+        <p>
+            &copy Nicole Rottmann
+        </p>
+    </footer>
+    <!--END FOOTER-->
+
+</body>
+
+</html>

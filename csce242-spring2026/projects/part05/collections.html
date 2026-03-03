@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Artistry Online | Collections
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="artifacts.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav id="nav-bar">
+        <div class="nav-inner">
+            <img id="nav-logo" src="images/logo.png" alt="Artistry Online Logo">
+
+            <ul id="nav-options">
+                <li><a href="index.html" .html" class="nav-option">Explore</a></li>
+                <li><a href="collections.html" class="nav-option">Collections</a></li>
+                <li><a href="artists.html"" class="nav-option">Artists</a></li>
+                <li><a href="works.html" class="nav-option">Works</a></li>
+                <li><a href="about.html" class="nav-option">About</a></li>
+            </ul>
+
+            <a id="sign-up-button" class="button" href="#">Sign Up</a>
+        </div>
+    </nav>
+    <!--End NAV-->
+
+
+    <!--Page Content-->
+    <main id="main-content">
+        <!--.pagecontainer class used to make main content uniform (margins etc.)-->
+        <div class="page-container">
+
+            <div class="artifacts-header"> <!--Wrapper for title & alphabet filter-->
+
+                <h1 class="artifacts-title">
+                    Collections
+                </h1>
+
+                <div class="alphabet-box">
+                    <ul class="alphabet-list">
+                        <li>
+                            <button class="alphabet-btn" data-letter="all">All</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="A">A</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="B">B</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="C">C</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="D">D</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="E">E</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="F">F</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="G">G</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="H">H</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="I">I</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="J">J</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="K">K</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="L">L</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="M">M</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="N">N</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="O">O</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="P">P</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="Q">Q</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="R">R</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="S">S</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="T">T</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="U">U</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="V">V</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="W">W</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="X">X</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="Y">Y</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="Z">Z</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="artifacts-search">
+                <form class="search-bar artifacts-search-form" data-entity="collection">
+
+                    <!-- Text input where user types -->
+                    <input type="text" class="artifacts-search-input" name="search"
+                        placeholder="Search for a collection..." autocomplete="off">
+
+                </form>
+            </div>
+
+
+
+            <div class="artifacts-layout"> <!--Will hold sort/filter boxes and the gallery grid-->
+                <aside class="sidebar">
+                    <div class="sidebar-content">
+                        <div class="box control-box" aria-expanded="false"> <!--SORT BOX-->
+                            <div class="control-title" tabindex="0">SORT BY:</div>
+
+                            <fieldset class="sort-group">
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-default" name="sort" value="default" class="sort-input"
+                                        checked>
+                                    <label for="sort-default">Popularity</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-newest" name="sort" value="newest" class="sort-input">
+                                    <label for="sort-newest">Newest</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-oldest" name="sort" value="az" class="sort-input">
+                                    <label for="sort-oldest">Oldest</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-az" name="sort" value="az" class="sort-input">
+                                    <label for="sort-az">A → Z</label>
+                                </div>
+
+                                <!-- add up to 3–6 options as needed -->
+                            </fieldset>
+                        </div>
+
+                        <div class="box control-box" aria-expanded="false"> <!--FILTER BOX-->
+                            <div class="control-title" tabindex="0">FILTER BY:</div>
+
+                            <div class="filter-group" data-filter="medium">
+                                <div id="filter-medium-heading" class="filter-subheading">Medium</div>
+
+                                <div class="filter-options" data-limit="5">
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-oil" name="medium" value="oil"
+                                            class="filter-checkbox">
+                                        <label for="medium-oil">Oil</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-watercolor" name="medium" value="watercolor"
+                                            class="filter-checkbox">
+                                        <label for="medium-watercolor">Watercolor</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-acrylic" name="medium" value="acrylic"
+                                            class="filter-checkbox">
+                                        <label for="medium-acrylic">Acrylic</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-sculpture" name="medium" value="sculpture"
+                                            class="filter-checkbox">
+                                        <label for="medium-sculpture">Sculpture</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="medium-print" name="medium" value="print"
+                                            class="filter-checkbox">
+                                        <label for="medium-print">Print</label>
+                                    </div>
+
+                                    <!-- See more button -->
+                                    <button type="button" class="see-more-btn">
+                                        see more...
+                                    </button>
+                                </div>
+
+
+                            </div>
+
+                            <div class="filter-group" data-filter="era">
+                                <div id="filter-era-heading" class="filter-subheading">Era</div>
+
+                                <div class="filter-options" data-limit="5">
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-ancient" name="era" value="ancient"
+                                            class="filter-checkbox">
+                                        <label for="era-ancient">Ancient</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-medieval" name="era" value="medieval"
+                                            class="filter-checkbox">
+                                        <label for="era-medieval">Medieval</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-modern" name="era" value="modern"
+                                            class="filter-checkbox">
+                                        <label for="era-modern">Modern</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-contemporary" name="era" value="contemporary"
+                                            class="filter-checkbox">
+                                        <label for="era-contemporary">Contemporary</label>
+                                    </div>
+
+                                    <button type="button" class="see-more-btn">
+                                        see more...
+                                    </button>
+                                </div>
+                            </div>
+
+
+                            <div class="filter-group" data-filter="artist">
+                                <div id="filter-era-heading" class="filter-subheading">Artist</div>
+
+
+                                <form class="search-bar sidebar-mini-search" role="search">
+                                    <input id="sidebar-artist-search" class="sidebar-mini-search-input" type="search"
+                                        name="artistQuery" placeholder="Search artists..." autocomplete="off">
+                                    <button class="button sidebar-button" type="submit"
+                                        class="sidebar-mini-search-submit">
+                                        Go
+                                    </button>
+                                </form>
+
+                            </div>
+
+
+                            <div class="filter-btns">
+                                <div>
+                                    <button type="button" class="button sidebar-button apply-filters">Apply</button>
+                                    <button type="button" class="button sidebar-button clear-filters">Clear</button>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Collections gallery: 4:3 thumbnails -->
+                <section class="gallery-grid">
+
+                    <!-- Single collection card-->
+                    <a href="#" class="card collection-card" data-title="The Renaissance Collection" data-letter="R"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/the-renaissance-collection.png"
+                            alt="Thumbnail for Renaissance collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="Flowers Collection" data-letter="F"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/flowers-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="Ancient Egypt Collection" data-letter="A"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/ancient-egypt-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="in-pink-collection" data-letter="P"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/in-pink-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="Van Gogh Collection" data-letter="V"
+                        data-artist="van-gogh" data-medium="mixed">
+                        <img src="images/collections/Van-gogh-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="Movement in Marble Collection" data-letter="M"
+                        data-artist="Various" data-medium="marble">
+                        <img src="images/collections/movement-in-marble-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="stained-glass-collection" data-letter="S"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/stained-glass-collection.png"
+                            alt="Thumbnail for Renaissance collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="Pointallism Collection" data-letter="P"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/pointallism-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="celestial-visions-collection" data-letter="C"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/celestial-visions-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="Dawn-of-art-collection" data-letter="D"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/Dawn-of-art-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="treasures-of-japan-collection" data-letter="T"
+                        data-artist="van-gogh" data-medium="mixed">
+                        <img src="images/collections/treasures-of-japan-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="the-loyal-companion-collection" data-letter="L"
+                        data-artist="Various" data-medium="marble">
+                        <img src="images/collections/the-loyal-companion-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="myths-and-legends-collection" data-letter="M"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/myths-and-legends-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="the-louvre-collection" data-letter="L"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/the-louvre-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="fabric-in-art-collection" data-letter="F"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/fabric-in-art-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="midieval-times-collection" data-letter="M"
+                        data-artist="Various" data-medium="mixed">
+                        <img src="images/collections/midieval-times-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="cubism-collection" data-letter="C"
+                        data-artist="van-gogh" data-medium="mixed">
+                        <img src="images/collections/cubism-collection.png" alt="Thumbnail for collection">
+                    </a>
+
+                    <a href="#" class="card collection-card" data-title="women-in-art-collection" data-letter="W"
+                        data-artist="Various" data-medium="marble">
+                        <img src="images/collections/women-in-art-collection.png" alt="Thumbnail for collection">
+                    </a>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!--FOOTER-->
+    <footer id="footer">
+        <p>
+            &copy Nicole Rottmann
+        </p>
+    </footer>
+    <!--END FOOTER-->
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+/* font-family: 'Cormorant Garamond', serif;
+font-family: 'Proza Libre', serif;
+ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Proza+Libre:wght@300;400;600&display=swap');
+
+:root {
+    /* GOLD - lines / buttons / accents */
+    --gold: rgba(198, 164, 94, 1);
+    --gold-75: rgba(198, 164, 94, .75);
+
+    /* DARK GOLD - button hover */
+    --dark-gold: rgba(184, 147, 78, 1);
+
+    /* CREAM - nav bar (75% opacity) */
+    --cream: rgba(232, 229, 221, 0.75);
+    --dark-cream: rgba(209, 206, 199, 1);
+
+    /* White overlay - nav options hover (5% opacity) */
+    --white-overlay: rgba(0, 0, 0, 0.05);
+
+    /* EGGSHELL - boxes / filters */
+    --eggshell: rgba(239, 239, 239, 1);
+
+    /* BLACK - paragraph text (75% opacity) */
+    --black-75: rgba(0, 0, 0, 0.75);
+
+    --shadow: rgba(0, 0, 0, 0.2);
+
+    --black: rgba(0, 0, 0, 1);
+
+    /* WHITE */
+    --white: rgba(255, 255, 255, 1);
+
+    --nav-height: 64px;
+    --gallery-row-offset: 220px;
+    --artifacts-gap: 32px;
+}
+
+.page-container,
+.page-container *,
+.page-container *::before,
+.page-container *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+  
+    overflow: auto; /* replace any rule that sets overflow: hidden */
+}
+
+body {
+    background-image: url("images/watercolor-paper-2.png");
+    margin: 0;
+}
+
+.page-container {
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    height: 100%
+}
+
+#main-content {
+    margin: 0;
+}
+
+
+/* ------------- Navigation Bar ---------------------- */
+#nav-bar {
+    background: var(--cream);
+    width: 100%;
+    border-bottom: 2px solid var(--gold);
+}
+
+.nav-inner {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 4px 0;
+    font-family: 'Cormorant Garamond', serif;
+    box-sizing: border-box;
+}
+
+#nav-content {
+    width: 90%;
+}
+
+#nav-logo {
+    height: 46px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+#nav-options {
+    flex: 1 1 auto;
+    min-width: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#nav-options .nav-option {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 4px 8px;
+}
+
+#nav-options .nav-option:hover {
+    background: var(--white-overlay);
+}
+
+
+
+/*------------.button---------------*/
+.button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 5px 5px 10px 2px var(--shadow);
+    text-align: center;
+}
+
+.button:hover {
+    background: var(--dark-gold);
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 14px 3px var(--shadow);
+}
+
+#sign-up-button {
+    margin-right: 0;
+    flex: 0 0 auto;
+}
+
+/*------------.box--------------*/
+.box {
+    background: var(--eggshell);
+    box-shadow: 5px 5px 10px 2px var(--shadow);
+    border-radius: 1px;
+}
+
+
+
+/*-----------Footer-------------*/
+#footer {
+    background: var(--cream);
+    width: 100%;
+    border-top: 2px solid var(--gold);
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 4px;
+}
+
+
+
+
+.card {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/*-------------Artist Card-------------*/
+
+.artist-link {
+    flex: 1 1 0;
+    display: block;
+    min-width: 0;
+    text-decoration: none;
+    color: inherit;
+    overflow: visible;
+}
+
+
+.artist-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 2px var(--shadow);
+
+}
+
+.artist-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.artist-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gold-75);
+    color: var(--white);
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+.artist-name {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.artist-meta {
+    margin: 6px 0 0 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.artist-link:hover .artist-card img {
+    transform: scale(1.02);
+    transition: transform .25s ease;
+}
+
+
+
+/*-----------Collection Card---------------*/
+
+.collection-card {
+    flex: 1 1 0;
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    text-decoration: none;
+    aspect-ratio: 4 / 3;
+}
+
+.collection-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.collection-card:hover img {
+    transform: scale(1.03);
+}
+
+

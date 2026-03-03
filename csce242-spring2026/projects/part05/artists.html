@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Artistry Online | Artists
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="artifacts.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav id="nav-bar">
+        <div class="nav-inner">
+            <img id="nav-logo" src="images/logo.png" alt="Artistry Online Logo">
+
+            <ul id="nav-options">
+                <li><a href="index.html" .html" class="nav-option">Explore</a></li>
+                <li><a href="collections.html" class="nav-option">Collections</a></li>
+                <li><a href="artists.html"" class=" nav-option">Artists</a></li>
+                <li><a href="works.html" class="nav-option">Works</a></li>
+                <li><a href="about.html" class="nav-option">About</a></li>
+            </ul>
+
+            <a id="sign-up-button" class="button" href="#">Sign Up</a>
+        </div>
+    </nav>
+    <!--End NAV-->
+
+
+    <!--Page Content-->
+    <main id="main-content">
+        <!--.pagecontainer class used to make main content uniform (margins etc.)-->
+        <div class="page-container">
+
+            <div class="artifacts-header"> <!--Wrapper for title & alphabet filter-->
+
+                <h1 class="artifacts-title">
+                    Artists
+                </h1>
+
+                <div class="alphabet-box">
+                    <ul class="alphabet-list">
+                        <li>
+                            <button class="alphabet-btn" data-letter="all">All</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="A">A</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="B">B</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="C">C</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="D">D</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="E">E</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="F">F</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="G">G</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="H">H</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="I">I</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="J">J</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="K">K</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="L">L</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="M">M</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="N">N</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="O">O</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="P">P</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="Q">Q</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="R">R</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="S">S</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="T">T</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="U">U</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="V">V</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="W">W</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="X">X</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="Y">Y</button>
+                        </li>
+                        <li>
+                            <button class="alphabet-btn" data-letter="Z">Z</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="artifacts-search">
+                <form class="search-bar artifacts-search-form" data-entity="collection">
+
+                    <!-- Text input where user types -->
+                    <input type="text" class="artifacts-search-input" name="search"
+                        placeholder="Search for an artist..." autocomplete="off">
+
+                </form>
+            </div>
+
+
+
+            <div class="artifacts-layout"> <!--Will hold sort/filter boxes and the gallery grid-->
+                <aside class="sidebar">
+                    <div class="sidebar-content">
+                        <div class="box control-box" aria-expanded="false"> <!--SORT BOX-->
+                            <div class="control-title" tabindex="0">SORT BY:</div>
+
+                            <fieldset class="sort-group">
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-default" name="sort" value="default" class="sort-input"
+                                        checked>
+                                    <label for="sort-default">Popularity</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-newest-by-birth" name="sort" value="newest-by-birth" class="sort-input">
+                                    <label for="sort-newest-by-birth">Newest by Birth</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-oldest-by-birth" name="sort" value="oldest-by-birth" class="sort-input">
+                                    <label for="sort-oldest-by-birth">Oldest by Birth</label>
+                                </div>
+
+                                <div class="sort-option">
+                                    <input type="radio" id="sort-az" name="sort" value="az" class="sort-input">
+                                    <label for="sort-az">A → Z</label>
+                                </div>
+
+                                <!-- add up to 3–6 options as needed -->
+                            </fieldset>
+
+                        </div>
+
+                        <div class="box control-box" aria-expanded="false"> <!--FILTER BOX-->
+                            <div class="control-title" tabindex="0">FILTER BY:</div>
+
+                            <div class="filter-group" data-filter="medium">
+                                <div id="filter-medium-heading" class="filter-subheading">Nationality</div>
+
+                                <div class="filter-options" data-limit="5">
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="nationality-american" name="nationality"
+                                            value="american" class="filter-checkbox">
+                                        <label for="nationality-american">American</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="nationality-dutch" name="nationality" value="dutch"
+                                            class="filter-checkbox">
+                                        <label for="nationality-dutch">Dutch</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="nationality-mexican" name="nationality"
+                                            value="mexican" class="filter-checkbox">
+                                        <label for="nationality-mexican">Mexican</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="nationality-japanese" name="nationality"
+                                            value="japanese" class="filter-checkbox">
+                                        <label for="nationality-japanese">Japanese</label>
+                                    </div>
+
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="nationality-italian" name="nationality"
+                                            value="italian" class="filter-checkbox">
+                                        <label for="nationality-italian">Italian</label>
+                                    </div>
+
+                                    <!-- See more button -->
+                                    <button type="button" class="see-more-btn">
+                                        see more...
+                                    </button>
+                                </div>
+
+
+                            </div>
+
+                            <div class="filter-group" data-filter="era">
+                                <div id="filter-era-heading" class="filter-subheading">Era</div>
+
+                                <div class="filter-options" data-limit="5">
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-ancient" name="era" value="ancient"
+                                            class="filter-checkbox">
+                                        <label for="era-ancient">Ancient</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-medieval" name="era" value="medieval"
+                                            class="filter-checkbox">
+                                        <label for="era-medieval">Medieval</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-modern" name="era" value="modern"
+                                            class="filter-checkbox">
+                                        <label for="era-modern">Modern</label>
+                                    </div>
+                                    <div class="filter-option">
+                                        <input type="checkbox" id="era-contemporary" name="era" value="contemporary"
+                                            class="filter-checkbox">
+                                        <label for="era-contemporary">Contemporary</label>
+                                    </div>
+
+                                    <button type="button" class="see-more-btn">
+                                        see more...
+                                    </button>
+                                </div>
+                            </div>
+
+
+
+                            <div class="filter-btns">
+                                <div>
+                                    <button type="button" class="button sidebar-button apply-filters">Apply</button>
+                                    <button type="button" class="button sidebar-button clear-filters">Clear</button>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Artists gallery, artist cards------->
+                <section class="gallery-grid">
+
+                    <!-- Single collection card-->
+
+                    <a href="#" class="card artist-link" data-title="Da-Vinci" data-letter="D" data-artist="Da Vinci"
+                        data-nationality="Italian">
+                        <div class="artist-card">
+                            <img src="images/artists/leonardo-da-vinci.png" alt="Leonardo da Vinci">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Leonardo da Vinci</h3>
+                                <p class="artist-meta">Italian, 1452–1519</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Kusama" data-letter="K" data-artist="Kusama"
+                        data-nationality="Japanese">
+                        <div class="artist-card">
+                            <img src="images/artists/Yayoi-Kusama.jpg" alt="Yayoi Kusama">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Yayoi Kusama</h3>
+                                <p class="artist-meta">Japanese, 1929– </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Rembrandt-van-Rijn" data-letter="R"
+                        data-artist="Rembrandt van Rijn" data-nationality="Dutch">
+                        <div class="artist-card">
+                            <img src="images/artists/rembrant-van-rijn.jpg" alt="Rembrandt van Rijn">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Rembrandt van Rijn</h3>
+                                <p class="artist-meta">Dutch, 1606–1669</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Sher-Gil" data-letter="S" data-artist="Sher-Gil"
+                        data-nationality="Hungarian-Indian">
+                        <div class="artist-card">
+                            <img src="images/artists/Amrita-Sher-Gil.jpg" alt="Amrita Sher-Gil">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Amrita Sher-Gil</h3>
+                                <p class="artist-meta">Hungarian-Indian, 1913–1941</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Picasso" data-letter="P" data-artist="Picasso"
+                        data-nationality="Spanish">
+                        <div class="artist-card">
+                            <img src="images/artists/Pablo-Picasso.jpg" alt="Pablo Picasso">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Pablo Picasso</h3>
+                                <p class="artist-meta">Spanish, 1881–1973</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Sherman" data-letter="S" data-artist="Sherman"
+                        data-nationality="American">
+                        <div class="artist-card">
+                            <img src="images/artists/Cindy-Sherman.jpg" alt="Cindy Sherman">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Cindy Sherman</h3>
+                                <p class="artist-meta">American, 1954– </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Warhol" data-letter="W" data-artist="Warhol"
+                        data-nationality="American">
+                        <div class="artist-card">
+                            <img src="images/artists/Andy-Warhol.jpg" alt="Andy Warhol">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Andy Warhol</h3>
+                                <p class="artist-meta">American, 1928–1987</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Raphael" data-letter="R" data-artist="Raphael"
+                        data-nationality="Italian">
+                        <div class="artist-card">
+                            <img src="images/artists/Raphael.jpg" alt="Raphael">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Raphael</h3>
+                                <p class="artist-meta">Italian, 1483–1520</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Michelangelo" data-letter="M"
+                        data-artist="Michelangelo" data-nationality="Italian">
+                        <div class="artist-card">
+                            <img src="images/artists/Michelangelo.jpg" alt="Michelangelo">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Michelangelo</h3>
+                                <p class="artist-meta">Italian, 1475–1564</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Ringgold" data-letter="R" data-artist="Ringgold"
+                        data-nationality="American">
+                        <div class="artist-card">
+                            <img src="images/artists/Faith-Ringgold.jpg" alt="Faith Ringgold">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Faith Ringgold</h3>
+                                <p class="artist-meta">American, 1930–2024</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Turner" data-letter="T" data-artist="Turner"
+                        data-nationality="British">
+                        <div class="artist-card">
+                            <img src="images/artists/Jmw-Turner.jpg" alt="J.M.W. Turner">
+                            <div class="artist-info">
+                                <h3 class="artist-name">J.M.W. Turner</h3>
+                                <p class="artist-meta">British, 1775–1851</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Neshat" data-letter="N" data-artist="Neshat"
+                        data-nationality="Iranian">
+                        <div class="artist-card">
+                            <img src="images/artists/shirin-neshat.jpg" alt="Shirin Neshat">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Shirin Neshat</h3>
+                                <p class="artist-meta">Iranian, 1957– </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Morisot" data-letter="M" data-artist="Morisot"
+                        data-nationality="French">
+                        <div class="artist-card">
+                            <img src="images/artists/berthe-morisot.jpg" alt="Berthe Morisot">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Berthe Morisot</h3>
+                                <p class="artist-meta">French, 1841–1895</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Anatsui" data-letter="A" data-artist="Anatsui"
+                        data-nationality="Ghanaian">
+                        <div class="artist-card">
+                            <img src="images/artists/el-anatsui.jpg" alt="El Anatsui">
+                            <div class="artist-info">
+                                <h3 class="artist-name">El Anatsui</h3>
+                                <p class="artist-meta">Ghanaian, 1944– </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Gentileschi" data-letter="G"
+                        data-artist="Gentileschi" data-nationality="Italian">
+                        <div class="artist-card">
+                            <img src="images/artists/artemisa-gentileschi.jpg" alt="Artemisia Gentileschi">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Artemisia Gentileschi</h3>
+                                <p class="artist-meta">Italian, 1593–1653</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Kahlo" data-letter="K" data-artist="Kahlo"
+                        data-nationality="Mexican">
+                        <div class="artist-card">
+                            <img src="images/artists/Frida-Kahlo.jpg" alt="Frida Kahlo">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Frida Kahlo</h3>
+                                <p class="artist-meta">Mexican, 1907–1954</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Goya" data-letter="G" data-artist="Goya"
+                        data-nationality="Spanish">
+                        <div class="artist-card">
+                            <img src="images/artists/Francisco-Goya.jpg" alt="Francisco Goya">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Francisco Goya</h3>
+                                <p class="artist-meta">Spanish, 1746–1828</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Van-Gogh" data-letter="V" data-artist="Van Gogh"
+                        data-nationality="Dutch">
+                        <div class="artist-card">
+                            <img src="images/artists/Vincent-van-Gogh.jpg" alt="Vincent van Gogh">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Vincent van Gogh</h3>
+                                <p class="artist-meta">Dutch, 1853–1890</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="OKeeffe" data-letter="O" data-artist="O'Keeffe"
+                        data-nationality="American">
+                        <div class="artist-card">
+                            <img src="images/artists/Georgia-O'Keeffe.jpg" alt="Georgia O’Keeffe">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Georgia O’Keeffe</h3>
+                                <p class="artist-meta">American, 1887–1986</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Cassatt" data-letter="C" data-artist="Cassatt"
+                        data-nationality="American">
+                        <div class="artist-card">
+                            <img src="images/artists/Mary-Cassatt.webp" alt="Mary Cassatt">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Mary Cassatt</h3>
+                                <p class="artist-meta">American, 1844–1926</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Af-Klint" data-letter="A" data-artist="Af Klint"
+                        data-nationality="Swedish">
+                        <div class="artist-card">
+                            <img src="images/artists/Hilma-af-Klint.jpg" alt="Hilma af Klint">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Hilma af Klint</h3>
+                                <p class="artist-meta">Swedish, 1862–1944</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Bourgeois" data-letter="B" data-artist="Bourgeois"
+                        data-nationality="French-American">
+                        <div class="artist-card">
+                            <img src="images/artists/Louise-Bourgeois.jpg" alt="Louise Bourgeois">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Louise Bourgeois</h3>
+                                <p class="artist-meta">French-American, 1911–2010</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Kandinsky" data-letter="K" data-artist="Kandinsky"
+                        data-nationality="Russian">
+                        <div class="artist-card">
+                            <img src="images/artists/wassily-kandinsky.jpg" alt="Wassily Kandinsky">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Wassily Kandinsky</h3>
+                                <p class="artist-meta">Russian, 1866–1944</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card artist-link" data-title="Hokusai" data-letter="H" data-artist="Hokusai"
+                        data-nationality="Japanese">
+                        <div class="artist-card">
+                            <img src="images/artists/Katsushika-Hokusai.jpg" alt="Katsushika Hokusai">
+                            <div class="artist-info">
+                                <h3 class="artist-name">Katsushika Hokusai</h3>
+                                <p class="artist-meta">Japanese, 1760–1849</p>
+                            </div>
+                        </div>
+                    </a>
+
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!--FOOTER-->
+    <footer id="footer">
+        <p>
+            &copy Nicole Rottmann
+        </p>
+    </footer>
+    <!--END FOOTER-->
+
+</body>
+
+</html>
