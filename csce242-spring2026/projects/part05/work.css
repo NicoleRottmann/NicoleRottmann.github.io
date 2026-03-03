@@ -1,0 +1,63 @@
+.artwork-details {
+    font-family:'proza libre',serif;
+    font-weight: 400;
+    margin-top: -15px;
+    font-size:1rem;
+}
+
+.artwork-content {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+}
+
+.artwork-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 5px 5px 10px 2px var(--shadow)
+}
+
+.artwork-description p{
+    font-family: 'Proza Libre', serif;
+    color: var(--black-75);
+    text-align: left;
+}
+
+
+.artwork-main {
+  flex: 0 0 80%;
+}
+
+.artwork-meta {
+  flex: 0 0 20%;
+}
+
+.add-to-favorites-btn {
+    justify-content: center;
+    margin: 0 20px;
+    display: block;
+}
+
+.artwork-attributes {
+  padding:.25rem;
+  margin: 24px 0;
+}
+
+.artwork-attributes p{
+    margin: 20px 10px;
+    font-family: 'Proza Libre', serif;
+}
+
+
+@media (max-width: 900px) {
+  .artwork-content {
+    flex-direction: column;
+  }
+
+  .artwork-main,
+  .artwork-meta {
+    flex: 0 0 100%;
+  }
+}
+
