@@ -1,0 +1,23 @@
+.favorites-page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    text-decoration: 1px underline;
+    text-underline-offset: 6px;
+    font-size: 2rem;
+    margin: 20px 0 20px 0;
+}
+
+.gallery-grid.horizontal {
+  display: flex;          /* switch from grid to flex */
+  gap: 1.5rem;
+
+  overflow-x: auto;       /* horizontal scroll */
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+}
+
+.gallery-grid.horizontal > * {
+  flex: 0 0 250px;        /* fixed width cards */
+}
