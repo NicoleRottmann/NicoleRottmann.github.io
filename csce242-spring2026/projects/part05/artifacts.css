@@ -354,6 +354,11 @@
 
 }
 
+#collections-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+
+}
+
 .card {
     display: block;
     width: 100%;
