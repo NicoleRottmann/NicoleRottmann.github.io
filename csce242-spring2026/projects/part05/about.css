@@ -1,0 +1,149 @@
+.page-title {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-family: 'proza libre', serif;
+    margin-bottom: 1rem;
+}
+
+#about-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about-content > * {
+  flex: 1 1 50%;
+}
+
+.about-1 {
+    margin-bottom: 15px;
+}
+
+#about-banner {
+  width: 95%;   
+  height: auto;
+
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 10px 2px var(--shadow);
+}
+
+#info-section {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  width:95%;
+  flex-wrap: wrap;
+  box-shadow: 5px 5px 10px 2px var(--shadow);
+  
+}
+
+.info-blurb {
+   flex: 0 0 33.33%;  
+   background: var(--cream);
+   font-family: 'proza libre',serif;
+   text-align: left; 
+   border: .5px solid var(--gold);
+   padding: auto 20px;
+   box-sizing: border-box;
+
+    display:flex;
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  .blurb-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 10px 10px;
+  }
+
+  .blurb-content {
+    flex:1;
+  }
+
+
+#blurb1 {
+    border-radius: 3px 0 0 3px;
+    border-right: none;
+}
+
+#blurb3 {
+    border-radius: 0 3px 3px 0;
+    border-left: none;
+}
+
+.blurb-title,
+.blurb-text {
+    margin: .5rem;
+    margin-left: .03rem;
+}
+
+.blurb-text {
+    color:var(--black-75);
+    font-size: .8rem;
+}
+
+#about-tagline {
+   font-style: italic;
+   text-align: center;
+   font-family: 'Cormorant Garamond', serif;
+   width: 90%;
+   font-weight: 800;
+   font-size: 1.5rem;
+}
+
+#mission-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    text-decoration: 1px underline;
+    text-underline-offset: 6px;
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+}
+
+.mission-text {
+    font-family: 'proza libre',serif;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    
+    #about-content {
+        flex-direction: column;
+        gap:1.5rem;
+    }
+
+    #about-content > * {
+        flex: 0 0 100%;
+    }
+
+   #info-section {
+    flex-direction: column;
+  }
+
+  .info-blurb {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    border: 0.5px solid var(--gold);
+  }
+
+  #blurb1 {
+    border-radius: 3px 3px 0 0;
+    border-bottom: none;
+  }
+
+   #blurb3 {
+    border-radius: 0 0 3px 3px;
+    border-top: none;
+  }
+   #blurb1,
+  #blurb3 {
+    border-right: 0.5px solid var(--gold);
+    border-left: 0.5px solid var(--gold);
+
+  }
+}

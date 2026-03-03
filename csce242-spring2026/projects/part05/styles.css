@@ -1,5 +1,6 @@
 /* font-family: 'Cormorant Garamond', serif;
 font-family: 'Proza Libre', serif;
+box-shadow: 5px 5px 10px 2px var(--shadow);
  */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Proza+Libre:wght@300;400;600&display=swap');
 
@@ -23,6 +24,8 @@ font-family: 'Proza Libre', serif;
 
     /* BLACK - paragraph text (75% opacity) */
     --black-75: rgba(0, 0, 0, 0.75);
+
+     --black-50: rgba(0, 0, 0, 0.5);
 
     --shadow: rgba(0, 0, 0, 0.2);
 
@@ -87,9 +90,6 @@ body {
     box-sizing: border-box;
 }
 
-#nav-content {
-    width: 90%;
-}
 
 #nav-logo {
     height: 46px;
